@@ -60,7 +60,7 @@
 
 <!-- MOTIVATION -->
 ## Motivation 
-This study explores the multifaceted impact of socio-economic, health, and environmental factors on life expectancy across various nations,  ultilizing a comprehensive dataset that spans several years.Through quantitative analysis, we aim to discern the relative importance of these variables, acknowledging the complex interplay between lifestyle choices, healthcare access, socio-economic status, and environmental conditionsin determining longevity.
+This study explores the multifaceted impact of socio-economic, health, and environmental factors on life expectancy across various nations, utilizing a comprehensive dataset that spans several years. Through quantitative analysis, we aim to discern the relative importance of these variables, acknowledging the complex interplay between lifestyle choices, healthcare access, socio-economic status, and environmental conditions in determining longevity.
 <p align="justify">
 
 </p>
@@ -87,11 +87,11 @@ D3. (n.d.). Retrieved from https://d3js.org/
 <p align="right">(<a href="#header">Back to top</a>)</p>
 
 <!-- Badges link-->
-[contributors-shield]: https://img.shields.io/github/contributors/MicroGix/OOP_Project?style=for-the-badge&label=CONTRIBUTORS 
-[contributors-url]: https://github.com/MicroGix/OOP_Project/graphs/contributors
-[forks-shield]:https://img.shields.io/github/forks/MicroGix/OOP_Project?style=for-the-badge&label=FORKS
-[forks-url]: https://github.com/MicroGix/OOP_Project/forks
-[stars-shield]: https://img.shields.io/github/stars/MicroGix/OOP_Project?style=for-the-badge&label=STARS
-[stars-url]: https://github.com/MicroGix/OOP_Proeject/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MicroGix/OOP_Project?style=for-the-badge&label=ISSUES
-[issues-url]: https://github.com/MicroGix/OOP_Project/issues
+[contributors-shield]: https://img.shields.io/github/contributors/Schrrodinger/DSDV_project?style=for-the-badge&label=CONTRIBUTORS 
+[contributors-url]: https://github.com/Schrrodinger/DSDV_project/graphs/contributors
+[forks-shield]:https://img.shields.io/github/forks/Schrrodinger/DSDV_project?style=for-the-badge&label=FORKS
+[forks-url]: https://github.com/Schrrodinger/DSDV_project/forks
+[stars-shield]: https://img.shields.io/github/stars/Schrrodinger/DSDV_project?style=for-the-badge&label=STARS
+[stars-url]: https://github.com/Schrrodinger/DSDV_project/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Schrrodinger/DSDV_project?style=for-the-badge&label=ISSUES
+[issues-url]: https://github.com/Schrrodinger/DSDV_project/issues
