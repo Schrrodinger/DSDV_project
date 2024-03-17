@@ -8,10 +8,15 @@
     <style>
         /* Basic styling for the chart container */
         .chart-container {
-            width: 50%;
+            width: 80%;
             margin: auto;
             height: 300px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
+        
     </style>
 </head>
 <body>
@@ -76,44 +81,6 @@ const lifeExpectancyChart = new Chart(ctx, {
     }
 });
 </script>
-
-<div class="chart-container">
-    <canvas id="lifeExpectancyChart"></canvas>
-</div>
-
-
-
-<!-- <script>
-    // Your existing script to initialize the chart
-
-    // Function to update the chart's color scheme
-    function updateChartColors(isDarkMode) {
-        const chartColors = isDarkMode ? { borderColor: 'lightgreen', backgroundColor: 'darkgray' } : { borderColor: 'blue', backgroundColor: 'white' };
-        
-        // Assume lifeExpectancyChart is the variable holding your Chart.js chart instance
-        lifeExpectancyChart.data.datasets.forEach((dataset) => {
-            dataset.borderColor = chartColors.borderColor;
-            // Apply any other color properties changes as needed
-        });
-        lifeExpectancyChart.options.scales.x.ticks.color = chartColors.borderColor; // Change X axis ticks color
-        lifeExpectancyChart.options.scales.y.ticks.color = chartColors.borderColor; // Change Y axis ticks color
-        lifeExpectancyChart.options.plugins.title.color = chartColors.borderColor; // Change title color
-        lifeExpectancyChart.update();
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        // Check Local Storage for dark mode state on page load
-        const isDarkMode = localStorage.getItem('darkMode') === "true";
-        updateChartColors(isDarkMode);
-    });
-
-    // Listen for messages from `index.html` to change themes dynamically
-    window.addEventListener('message', (event) => {
-        if (event.data === "dark" || event.data === "light") {
-            updateChartColors(event.data === "dark");
-        }
-    });
-</script> -->
 
 </body>
 </html>

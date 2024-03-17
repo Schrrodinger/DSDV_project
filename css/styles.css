@@ -11,9 +11,9 @@
 :root{
     /* ===== Colors ===== */
     --body-color:#e3e3e3;
-    --sidebar-color:#cd4953;
-    --primary-color: #f3bb78;
-    --primary-color-light: #9eb39c;
+    --sidebar-color:#92cde5;
+    --primary-color: #595959;
+    --primary-color-light: #cf88db;
     --toggle-color: #DDD;
     --text-color: #1a1a1a;
 
@@ -31,10 +31,10 @@ body{
 }
 
 body.dark{
-    --body-color:#625e72;
-    --sidebar-color:#701172;
-    --primary-color: #bcb88a;
-    --primary-color-light: #8d92bf;
+    --body-color:#4D648D;
+    --sidebar-color:#1E1F26;
+    --primary-color: #336B87;
+    --primary-color-light: #D0E1F9;
     --toggle-color: #fff;
     --text-color: #eeeff0;
 }
@@ -281,3 +281,21 @@ body.dark .switch::before{
     left: 88px;
     width: calc(100% - 88px);
 }
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .graph,
+  .testing {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .graph,
+    .testing {
+      width: 100%;
+    }
+  }

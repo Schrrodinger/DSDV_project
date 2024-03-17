@@ -11,6 +11,26 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <title> Life Expectancy Dashboard </title>
+  <style>
+    .dashboard {
+      display: flex;
+      gap: 1px; 
+    }
+    .line1,
+    .pie1 {
+      flex: 1;
+    }
+    .pie1 iframe {
+      width: 80%;
+      height: 350px; /* Adjust the height value as needed */
+    }
+    .line1 iframe {
+      width: 90%;
+      height: 350px;
+      margin-right: 10px;
+    }
+
+  </style>
 </head>
 <body >
   <nav class="sidebar close">
@@ -84,12 +104,17 @@
 
   <section class="home">
     <div class="text">Life Expectancy</div>
-    <iframe src="graph.html" width="100%" height="500px"></iframe>
+    <div class="dashboard">
+      <div class="line1">
+        <iframe src="line1.html" width="100%" height="500px"></iframe>
+      </div>
+      <div class="pie1">
+        <iframe src="pie1.html" width="100%" height="500px"></iframe>
+      </div>
+    </div>
   </section>
 
-
+  </section>
   <script src ="script.js"></script>
-
-  
   </body>
   </html>

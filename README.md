@@ -50,7 +50,7 @@
 
 | Order |         Name          |     ID      |                  Email                  |                       Github account                        |                              Facebook                              |
 | :---: | :-------------------: | :---------: |:---------------------------------------:| :---------------------------------------------------------: | :----------------------------------------------------------------: |
-|   1   | Duong Khanh Trang | ITDSIU21|  ITDSIU21117@student.hcmiu.edu.vn | [Dyceejl](https://github.com/Dyceejl) | [Khánh Chang](https://www.facebook.com/profile.php?id=100094699865328) |
+|   1   | Duong Khanh Trang | ITDSIU21127|  ITDSIU21117@student.hcmiu.edu.vn | [Dyceejl](https://github.com/Dyceejl) | [Khánh Chang](https://www.facebook.com/profile.php?id=100094699865328) |
 |   2   | Tran Quynh Nhu | ITDSIU21 |  ITDSIU21123@student.hcmiu.edu.vn | [tronldau](https://github.com/tronldau) | [Trần Như](https://www.facebook.com/profile.php?id=100007911467259) |
 |   3   | Le Thi Thuy Nga | ITDSIU21024 | ITDSIU21024@student.hcmiu.edu.vn | [Schrrodinger](https://github.com/Schrrodinger) | [Thuy Nga](https://www.facebook.com/profile.php?id=100032005854236) |
 
