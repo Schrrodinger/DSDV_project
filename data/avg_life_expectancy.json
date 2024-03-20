@@ -1,0 +1,917 @@
+[
+ {
+  "Numbers": 1,
+  "Country": "Afghanistan",
+  "Life.expectancy": 58.19
+ },
+ {
+  "Numbers": 2,
+  "Country": "Albania",
+  "Life.expectancy": 75.16
+ },
+ {
+  "Numbers": 3,
+  "Country": "Algeria",
+  "Life.expectancy": 73.62
+ },
+ {
+  "Numbers": 4,
+  "Country": "Angola",
+  "Life.expectancy": 49.02
+ },
+ {
+  "Numbers": 5,
+  "Country": "Antigua and Barbuda",
+  "Life.expectancy": 75.06
+ },
+ {
+  "Numbers": 6,
+  "Country": "Argentina",
+  "Life.expectancy": 75.16
+ },
+ {
+  "Numbers": 7,
+  "Country": "Armenia",
+  "Life.expectancy": 73.4
+ },
+ {
+  "Numbers": 8,
+  "Country": "Australia",
+  "Life.expectancy": 81.81
+ },
+ {
+  "Numbers": 9,
+  "Country": "Austria",
+  "Life.expectancy": 81.48
+ },
+ {
+  "Numbers": 10,
+  "Country": "Azerbaijan",
+  "Life.expectancy": 70.73
+ },
+ {
+  "Numbers": 11,
+  "Country": "Bahamas",
+  "Life.expectancy": 74.29
+ },
+ {
+  "Numbers": 12,
+  "Country": "Bahrain",
+  "Life.expectancy": 75.73
+ },
+ {
+  "Numbers": 13,
+  "Country": "Bangladesh",
+  "Life.expectancy": 69.3
+ },
+ {
+  "Numbers": 14,
+  "Country": "Barbados",
+  "Life.expectancy": 74.36
+ },
+ {
+  "Numbers": 15,
+  "Country": "Belarus",
+  "Life.expectancy": 69.91
+ },
+ {
+  "Numbers": 16,
+  "Country": "Belgium",
+  "Life.expectancy": 80.68
+ },
+ {
+  "Numbers": 17,
+  "Country": "Belize",
+  "Life.expectancy": 69.27
+ },
+ {
+  "Numbers": 18,
+  "Country": "Benin",
+  "Life.expectancy": 57.57
+ },
+ {
+  "Numbers": 19,
+  "Country": "Bhutan",
+  "Life.expectancy": 66.16
+ },
+ {
+  "Numbers": 20,
+  "Country": "Bolivia (Plurinational State of)",
+  "Life.expectancy": 67.71
+ },
+ {
+  "Numbers": 21,
+  "Country": "Bosnia and Herzegovina",
+  "Life.expectancy": 75.97
+ },
+ {
+  "Numbers": 22,
+  "Country": "Botswana",
+  "Life.expectancy": 56.05
+ },
+ {
+  "Numbers": 23,
+  "Country": "Brazil",
+  "Life.expectancy": 73.38
+ },
+ {
+  "Numbers": 24,
+  "Country": "Brunei Darussalam",
+  "Life.expectancy": 76.49
+ },
+ {
+  "Numbers": 25,
+  "Country": "Bulgaria",
+  "Life.expectancy": 72.85
+ },
+ {
+  "Numbers": 26,
+  "Country": "Burkina Faso",
+  "Life.expectancy": 55.64
+ },
+ {
+  "Numbers": 27,
+  "Country": "Burundi",
+  "Life.expectancy": 55.54
+ },
+ {
+  "Numbers": 28,
+  "Country": "CÃ´te d'Ivoire",
+  "Life.expectancy": 50.39
+ },
+ {
+  "Numbers": 29,
+  "Country": "Cabo Verde",
+  "Life.expectancy": 72.52
+ },
+ {
+  "Numbers": 30,
+  "Country": "Cambodia",
+  "Life.expectancy": 64.34
+ },
+ {
+  "Numbers": 31,
+  "Country": "Cameroon",
+  "Life.expectancy": 54.02
+ },
+ {
+  "Numbers": 32,
+  "Country": "Canada",
+  "Life.expectancy": 81.69
+ },
+ {
+  "Numbers": 33,
+  "Country": "Central African Republic",
+  "Life.expectancy": 48.51
+ },
+ {
+  "Numbers": 34,
+  "Country": "Chad",
+  "Life.expectancy": 50.39
+ },
+ {
+  "Numbers": 35,
+  "Country": "Chile",
+  "Life.expectancy": 79.45
+ },
+ {
+  "Numbers": 36,
+  "Country": "China",
+  "Life.expectancy": 74.26
+ },
+ {
+  "Numbers": 37,
+  "Country": "Colombia",
+  "Life.expectancy": 73.29
+ },
+ {
+  "Numbers": 38,
+  "Country": "Comoros",
+  "Life.expectancy": 61.58
+ },
+ {
+  "Numbers": 39,
+  "Country": "Congo",
+  "Life.expectancy": 69.04
+ },
+ {
+  "Numbers": 40,
+  "Country": "Costa Rica",
+  "Life.expectancy": 78.59
+ },
+ {
+  "Numbers": 41,
+  "Country": "Croatia",
+  "Life.expectancy": 76.12
+ },
+ {
+  "Numbers": 42,
+  "Country": "Cuba",
+  "Life.expectancy": 77.98
+ },
+ {
+  "Numbers": 43,
+  "Country": "Cyprus",
+  "Life.expectancy": 79.68
+ },
+ {
+  "Numbers": 44,
+  "Country": "Czechia",
+  "Life.expectancy": 76.77
+ },
+ {
+  "Numbers": 45,
+  "Country": "North Korea",
+  "Life.expectancy": 69.19
+ },
+ {
+  "Numbers": 46,
+  "Country": "Democratic Republic of the Congo",
+  "Life.expectancy": 55.69
+ },
+ {
+  "Numbers": 47,
+  "Country": "Denmark",
+  "Life.expectancy": 79.26
+ },
+ {
+  "Numbers": 48,
+  "Country": "Djibouti",
+  "Life.expectancy": 60.76
+ },
+ {
+  "Numbers": 49,
+  "Country": "Dominican Republic",
+  "Life.expectancy": 73.34
+ },
+ {
+  "Numbers": 50,
+  "Country": "Ecuador",
+  "Life.expectancy": 74.73
+ },
+ {
+  "Numbers": 51,
+  "Country": "Egypt",
+  "Life.expectancy": 71.5
+ },
+ {
+  "Numbers": 52,
+  "Country": "El Salvador",
+  "Life.expectancy": 71.74
+ },
+ {
+  "Numbers": 53,
+  "Country": "Equatorial Guinea",
+  "Life.expectancy": 55.31
+ },
+ {
+  "Numbers": 54,
+  "Country": "Eritrea",
+  "Life.expectancy": 60.69
+ },
+ {
+  "Numbers": 55,
+  "Country": "Estonia",
+  "Life.expectancy": 74.94
+ },
+ {
+  "Numbers": 56,
+  "Country": "Ethiopia",
+  "Life.expectancy": 59.11
+ },
+ {
+  "Numbers": 57,
+  "Country": "Fiji",
+  "Life.expectancy": 68.71
+ },
+ {
+  "Numbers": 58,
+  "Country": "Finland",
+  "Life.expectancy": 80.71
+ },
+ {
+  "Numbers": 59,
+  "Country": "France",
+  "Life.expectancy": 82.22
+ },
+ {
+  "Numbers": 60,
+  "Country": "Gabon",
+  "Life.expectancy": 62.24
+ },
+ {
+  "Numbers": 61,
+  "Country": "Gambia",
+  "Life.expectancy": 59.46
+ },
+ {
+  "Numbers": 62,
+  "Country": "Georgia",
+  "Life.expectancy": 73.5
+ },
+ {
+  "Numbers": 63,
+  "Country": "Germany",
+  "Life.expectancy": 81.18
+ },
+ {
+  "Numbers": 64,
+  "Country": "Ghana",
+  "Life.expectancy": 60.86
+ },
+ {
+  "Numbers": 65,
+  "Country": "Greece",
+  "Life.expectancy": 81.22
+ },
+ {
+  "Numbers": 66,
+  "Country": "Grenada",
+  "Life.expectancy": 73.29
+ },
+ {
+  "Numbers": 67,
+  "Country": "Guatemala",
+  "Life.expectancy": 71.73
+ },
+ {
+  "Numbers": 68,
+  "Country": "Guinea",
+  "Life.expectancy": 56.01
+ },
+ {
+  "Numbers": 69,
+  "Country": "Guinea-Bissau",
+  "Life.expectancy": 55.37
+ },
+ {
+  "Numbers": 70,
+  "Country": "Guyana",
+  "Life.expectancy": 65.64
+ },
+ {
+  "Numbers": 71,
+  "Country": "Haiti",
+  "Life.expectancy": 59.87
+ },
+ {
+  "Numbers": 72,
+  "Country": "Honduras",
+  "Life.expectancy": 73
+ },
+ {
+  "Numbers": 73,
+  "Country": "Hungary",
+  "Life.expectancy": 73.83
+ },
+ {
+  "Numbers": 74,
+  "Country": "Iceland",
+  "Life.expectancy": 82.44
+ },
+ {
+  "Numbers": 75,
+  "Country": "India",
+  "Life.expectancy": 65.42
+ },
+ {
+  "Numbers": 76,
+  "Country": "Indonesia",
+  "Life.expectancy": 67.56
+ },
+ {
+  "Numbers": 77,
+  "Country": "Iran",
+  "Life.expectancy": 73.86
+ },
+ {
+  "Numbers": 78,
+  "Country": "Iraq",
+  "Life.expectancy": 70.36
+ },
+ {
+  "Numbers": 79,
+  "Country": "Ireland",
+  "Life.expectancy": 80.15
+ },
+ {
+  "Numbers": 80,
+  "Country": "Israel",
+  "Life.expectancy": 81.3
+ },
+ {
+  "Numbers": 81,
+  "Country": "Italy",
+  "Life.expectancy": 82.19
+ },
+ {
+  "Numbers": 82,
+  "Country": "Jamaica",
+  "Life.expectancy": 74.29
+ },
+ {
+  "Numbers": 83,
+  "Country": "Japan",
+  "Life.expectancy": 82.54
+ },
+ {
+  "Numbers": 84,
+  "Country": "Jordan",
+  "Life.expectancy": 73
+ },
+ {
+  "Numbers": 85,
+  "Country": "Kazakhstan",
+  "Life.expectancy": 66.76
+ },
+ {
+  "Numbers": 86,
+  "Country": "Kenya",
+  "Life.expectancy": 57.48
+ },
+ {
+  "Numbers": 87,
+  "Country": "Kiribati",
+  "Life.expectancy": 65.15
+ },
+ {
+  "Numbers": 88,
+  "Country": "Kuwait",
+  "Life.expectancy": 73.84
+ },
+ {
+  "Numbers": 89,
+  "Country": "Kyrgyzstan",
+  "Life.expectancy": 69.08
+ },
+ {
+  "Numbers": 90,
+  "Country": "Laos",
+  "Life.expectancy": 62.38
+ },
+ {
+  "Numbers": 91,
+  "Country": "Latvia",
+  "Life.expectancy": 73.73
+ },
+ {
+  "Numbers": 92,
+  "Country": "Lebanon",
+  "Life.expectancy": 74.2
+ },
+ {
+  "Numbers": 93,
+  "Country": "Lesotho",
+  "Life.expectancy": 48.78
+ },
+ {
+  "Numbers": 94,
+  "Country": "Liberia",
+  "Life.expectancy": 57.5
+ },
+ {
+  "Numbers": 95,
+  "Country": "Libya",
+  "Life.expectancy": 72.49
+ },
+ {
+  "Numbers": 96,
+  "Country": "Lithuania",
+  "Life.expectancy": 72.8
+ },
+ {
+  "Numbers": 97,
+  "Country": "Luxembourg",
+  "Life.expectancy": 80.78
+ },
+ {
+  "Numbers": 98,
+  "Country": "Madagascar",
+  "Life.expectancy": 62.74
+ },
+ {
+  "Numbers": 99,
+  "Country": "Malawi",
+  "Life.expectancy": 49.9
+ },
+ {
+  "Numbers": 100,
+  "Country": "Malaysia",
+  "Life.expectancy": 73.76
+ },
+ {
+  "Numbers": 101,
+  "Country": "Maldives",
+  "Life.expectancy": 75.54
+ },
+ {
+  "Numbers": 102,
+  "Country": "Mali",
+  "Life.expectancy": 54.9
+ },
+ {
+  "Numbers": 103,
+  "Country": "Malta",
+  "Life.expectancy": 80.36
+ },
+ {
+  "Numbers": 104,
+  "Country": "Mauritania",
+  "Life.expectancy": 62.8
+ },
+ {
+  "Numbers": 105,
+  "Country": "Mauritius",
+  "Life.expectancy": 72.71
+ },
+ {
+  "Numbers": 106,
+  "Country": "Mexico",
+  "Life.expectancy": 75.72
+ },
+ {
+  "Numbers": 107,
+  "Country": "Micronesia",
+  "Life.expectancy": 68.2
+ },
+ {
+  "Numbers": 108,
+  "Country": "Mongolia",
+  "Life.expectancy": 65.88
+ },
+ {
+  "Numbers": 109,
+  "Country": "Montenegro",
+  "Life.expectancy": 74.5
+ },
+ {
+  "Numbers": 110,
+  "Country": "Morocco",
+  "Life.expectancy": 72.16
+ },
+ {
+  "Numbers": 111,
+  "Country": "Mozambique",
+  "Life.expectancy": 53.4
+ },
+ {
+  "Numbers": 112,
+  "Country": "Myanmar",
+  "Life.expectancy": 64.2
+ },
+ {
+  "Numbers": 113,
+  "Country": "Namibia",
+  "Life.expectancy": 60.4
+ },
+ {
+  "Numbers": 114,
+  "Country": "Nepal",
+  "Life.expectancy": 66.48
+ },
+ {
+  "Numbers": 115,
+  "Country": "Netherlands",
+  "Life.expectancy": 81.13
+ },
+ {
+  "Numbers": 116,
+  "Country": "New Zealand",
+  "Life.expectancy": 81.34
+ },
+ {
+  "Numbers": 117,
+  "Country": "Nicaragua",
+  "Life.expectancy": 73.45
+ },
+ {
+  "Numbers": 118,
+  "Country": "Niger",
+  "Life.expectancy": 56.9
+ },
+ {
+  "Numbers": 119,
+  "Country": "Nigeria",
+  "Life.expectancy": 51.36
+ },
+ {
+  "Numbers": 120,
+  "Country": "Norway",
+  "Life.expectancy": 81.8
+ },
+ {
+  "Numbers": 121,
+  "Country": "Oman",
+  "Life.expectancy": 74.8
+ },
+ {
+  "Numbers": 122,
+  "Country": "Pakistan",
+  "Life.expectancy": 64.5
+ },
+ {
+  "Numbers": 123,
+  "Country": "Panama",
+  "Life.expectancy": 76.49
+ },
+ {
+  "Numbers": 124,
+  "Country": "Papua New Guinea",
+  "Life.expectancy": 61.68
+ },
+ {
+  "Numbers": 125,
+  "Country": "Paraguay",
+  "Life.expectancy": 73.11
+ },
+ {
+  "Numbers": 126,
+  "Country": "Peru",
+  "Life.expectancy": 73.6
+ },
+ {
+  "Numbers": 127,
+  "Country": "Philippines",
+  "Life.expectancy": 67.57
+ },
+ {
+  "Numbers": 128,
+  "Country": "Poland",
+  "Life.expectancy": 75.65
+ },
+ {
+  "Numbers": 129,
+  "Country": "Portugal",
+  "Life.expectancy": 78
+ },
+ {
+  "Numbers": 130,
+  "Country": "Qatar",
+  "Life.expectancy": 77.03
+ },
+ {
+  "Numbers": 131,
+  "Country": "South Korea",
+  "Life.expectancy": 80.49
+ },
+ {
+  "Numbers": 132,
+  "Country": "Republic of Moldova",
+  "Life.expectancy": 70
+ },
+ {
+  "Numbers": 133,
+  "Country": "Romania",
+  "Life.expectancy": 74.05
+ },
+ {
+  "Numbers": 134,
+  "Country": "Russia",
+  "Life.expectancy": 67.76
+ },
+ {
+  "Numbers": 135,
+  "Country": "Rwanda",
+  "Life.expectancy": 59.3
+ },
+ {
+  "Numbers": 136,
+  "Country": "Saint Lucia",
+  "Life.expectancy": 73.6
+ },
+ {
+  "Numbers": 137,
+  "Country": "Saint Vincent and the Grenadines",
+  "Life.expectancy": 73.47
+ },
+ {
+  "Numbers": 138,
+  "Country": "Samoa",
+  "Life.expectancy": 73.62
+ },
+ {
+  "Numbers": 139,
+  "Country": "Sao Tome and Principe",
+  "Life.expectancy": 65.16
+ },
+ {
+  "Numbers": 140,
+  "Country": "Saudi Arabia",
+  "Life.expectancy": 73.47
+ },
+ {
+  "Numbers": 141,
+  "Country": "Senegal",
+  "Life.expectancy": 62.57
+ },
+ {
+  "Numbers": 142,
+  "Country": "Serbia",
+  "Life.expectancy": 73.96
+ },
+ {
+  "Numbers": 143,
+  "Country": "Seychelles",
+  "Life.expectancy": 73.4
+ },
+ {
+  "Numbers": 144,
+  "Country": "Sierra Leone",
+  "Life.expectancy": 46.11
+ },
+ {
+  "Numbers": 145,
+  "Country": "Singapore",
+  "Life.expectancy": 81.5
+ },
+ {
+  "Numbers": 146,
+  "Country": "Slovakia",
+  "Life.expectancy": 74.75
+ },
+ {
+  "Numbers": 147,
+  "Country": "Slovenia",
+  "Life.expectancy": 79.73
+ },
+ {
+  "Numbers": 148,
+  "Country": "Solomon Islands",
+  "Life.expectancy": 67.71
+ },
+ {
+  "Numbers": 149,
+  "Country": "Somalia",
+  "Life.expectancy": 53.3
+ },
+ {
+  "Numbers": 150,
+  "Country": "South Africa",
+  "Life.expectancy": 57.5
+ },
+ {
+  "Numbers": 151,
+  "Country": "South Sudan",
+  "Life.expectancy": 53.87
+ },
+ {
+  "Numbers": 152,
+  "Country": "Spain",
+  "Life.expectancy": 82.07
+ },
+ {
+  "Numbers": 153,
+  "Country": "Sri Lanka",
+  "Life.expectancy": 73.4
+ },
+ {
+  "Numbers": 154,
+  "Country": "Sudan",
+  "Life.expectancy": 61.8
+ },
+ {
+  "Numbers": 155,
+  "Country": "Suriname",
+  "Life.expectancy": 70.1
+ },
+ {
+  "Numbers": 156,
+  "Country": "Swaziland",
+  "Life.expectancy": 51.3
+ },
+ {
+  "Numbers": 157,
+  "Country": "Sweden",
+  "Life.expectancy": 82.52
+ },
+ {
+  "Numbers": 158,
+  "Country": "Switzerland",
+  "Life.expectancy": 82.33
+ },
+ {
+  "Numbers": 159,
+  "Country": "Syria",
+  "Life.expectancy": 70.85
+ },
+ {
+  "Numbers": 160,
+  "Country": "Tajikistan",
+  "Life.expectancy": 66.65
+ },
+ {
+  "Numbers": 161,
+  "Country": "Thailand",
+  "Life.expectancy": 73.08
+ },
+ {
+  "Numbers": 162,
+  "Country": "The former Yugoslav republic of Macedonia",
+  "Life.expectancy": 74.11
+ },
+ {
+  "Numbers": 163,
+  "Country": "Timor-Leste",
+  "Life.expectancy": 64.75
+ },
+ {
+  "Numbers": 164,
+  "Country": "Togo",
+  "Life.expectancy": 56.66
+ },
+ {
+  "Numbers": 165,
+  "Country": "Tonga",
+  "Life.expectancy": 72.53
+ },
+ {
+  "Numbers": 166,
+  "Country": "Trinidad and Tobago",
+  "Life.expectancy": 71.07
+ },
+ {
+  "Numbers": 167,
+  "Country": "Tunisia",
+  "Life.expectancy": 74.35
+ },
+ {
+  "Numbers": 168,
+  "Country": "Turkey",
+  "Life.expectancy": 73.91
+ },
+ {
+  "Numbers": 169,
+  "Country": "Turkmenistan",
+  "Life.expectancy": 64.62
+ },
+ {
+  "Numbers": 170,
+  "Country": "Uganda",
+  "Life.expectancy": 55.71
+ },
+ {
+  "Numbers": 171,
+  "Country": "Ukraine",
+  "Life.expectancy": 69.94
+ },
+ {
+  "Numbers": 172,
+  "Country": "United Arab Emirates",
+  "Life.expectancy": 75.7
+ },
+ {
+  "Numbers": 173,
+  "Country": "United Kingdom",
+  "Life.expectancy": 80.8
+ },
+ {
+  "Numbers": 174,
+  "Country": "United Republic of Tanzania",
+  "Life.expectancy": 56
+ },
+ {
+  "Numbers": 175,
+  "Country": "United States of America",
+  "Life.expectancy": 78.06
+ },
+ {
+  "Numbers": 176,
+  "Country": "Uruguay",
+  "Life.expectancy": 76.08
+ },
+ {
+  "Numbers": 177,
+  "Country": "Uzbekistan",
+  "Life.expectancy": 68.03
+ },
+ {
+  "Numbers": 178,
+  "Country": "Vanuatu",
+  "Life.expectancy": 71.38
+ },
+ {
+  "Numbers": 179,
+  "Country": "Venezuela",
+  "Life.expectancy": 73.38
+ },
+ {
+  "Numbers": 180,
+  "Country": "Viet Nam",
+  "Life.expectancy": 74.78
+ },
+ {
+  "Numbers": 181,
+  "Country": "Yemen",
+  "Life.expectancy": 63.86
+ },
+ {
+  "Numbers": 182,
+  "Country": "Zambia",
+  "Life.expectancy": 54
+ },
+ {
+  "Numbers": 183,
+  "Country": "Zimbabwe",
+  "Life.expectancy": 50.49
+ }
+]

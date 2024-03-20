@@ -24,50 +24,45 @@
     </style>
 </head>
 <body>
+    <div class = "phppot-container">
+        <div>
+            <select id="year-select" onchange="updateMap()">
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+            </select>
+        </div>
+    </div>
     <div id="worldmap"></div>
     <div id="tooltip"></div>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://d3js.org/topojson.v3.min.js"></script>
     <script>
-        const svg = d3.select("#worldmap").append("svg")
-            .attr("width", "100%")
-            .attr("height", "100%");
+        d3.json("F:\Onedrive\Documents\GitHub\DSDV_project\data\avg_life_expectancy.xlsx").then(function (data) {
+            // Bind data and create one path per GeoJSON feature
+            svg.selectAll("path")
+                .data(data.features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .style("fill", "lightblue"); // Change color as needed based on your data
+        });
 
-        const projection = d3.geoMercator()
-            .scale(150)
-            .translate([window.innerWidth / 2, window.innerHeight / 1.5]);
-        const path = d3.geoPath().projection(projection);
-
-        const zoom = d3.zoom()
-            .scaleExtent([1, 8])
-            .on('zoom', (event) => {
-                svg.selectAll('path').attr('transform', event.transform);
-            });
-        svg.call(zoom);
-
-        d3.json("https://unpkg.com/world-atlas@2/countries-110m.json")
-            .then(data => {
-                svg.selectAll("path")
-                    .data(topojson.feature(data, data.objects.countries).features)
-                    .enter().append("path")
-                    .attr("d", path)
-                    .attr("fill", "#7f7f7f") // Original darker color
-                    .attr("stroke", "white") // Borders between countries
-                    .attr("stroke-width", 0.5) // Border width
-                    .on("mouseover", function(event, d) {
-                        d3.select(this).attr("fill", "#9dc9ac"); // Lighter color on hover
-                        d3.select("#tooltip")
-                            .style("left", (event.pageX + 15) + "px")
-                            .style("top", (event.pageY + 15) + "px")
-                            .style("display", "inline")
-                            .html(d.properties.name); // Display country name in the tooltip
-                    })
-                    .on("mouseout", function() {
-                        d3.select(this).attr("fill", "#7f7f7f"); // Revert to original color
-                        d3.select("#tooltip").style("display", "none"); // Hide the tooltip
-                    });
-            })
-            .catch(error => console.error("Error loading or processing the data:", error));
     </script>
+    <script src ="js/map.js"></script>
+    
 </body>
 </html>
