@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life Expectancy Line Graph with D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: black;
+            shape-rendering: crispEdges;
+        }
+        .line {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <label for="countrySelect">Select Country:</label>
+    <select id="countrySelect"></select>
+    <svg width="800" height="400"></svg>
+
+    <script>
+        var rawData = `Country,Year,Life expectancy
+Afghanistan,2000,54.8
+Afghanistan,2001,55.3
+Zimbabwe,2018,60.7
+Zimbabwe,2019,61.2`;
+
+        var svg = d3.select("svg"),
+            margin = { top: 20, right: 20, bottom: 30, left: 50 },
+            width = +svg.attr("width") - margin.left - margin.right,
+            height = +svg.attr("height") - margin.top - margin.bottom,
+            g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        var x = d3.scaleLinear().rangeRound([0, width]),
+            y = d3.scaleLinear().rangeRound([height, 0]);
+
+        var line = d3.line()
+            .x(function(d) { return x(d.year); })
+            .y(function(d) { return y(d.lifeExpectancy); });
+
+        var parsedData = {};
+        rawData.split('\n').slice(1).forEach(function(line) {
+            var parts = line.split(','),
+                country = parts[0],
+                year = +parts[1],
+                lifeExp = +parts[2];
+            if (!parsedData[country]) parsedData[country] = [];
+            parsedData[country].push({ year: year, lifeExpectancy: lifeExp });
+        });
+
+        var countries = Object.keys(parsedData);
+        var select = d3.select("#countrySelect");
+        select.selectAll("option")
+            .data(countries)
+            .enter().append("option")
+            .text(function(d) { return d; });
+
+        // Setup axes only once
+        x.domain([2000, 2020]);  // Assuming year range is known
+        y.domain([0, 100]);  // Set this according to your known max and min values
+
+        g.append("g")
+            .attr("class", "axis axis--x")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+
+        g.append("g")
+            .attr("class", "axis axis--y")
+            .call(d3.axisLeft(y));
+
+        var path = g.append("path")
+            .attr("class", "line");
+
+        function updateChart(country) {
+            var data = parsedData[country];
+            path.datum(data)
+                .attr("d", line);
+        }
+
+        select.on("change", function(event) {
+            updateChart(this.value);
+        });
+
+        updateChart(countries[0]); // Initialize with the first country
+    </script>
+</body>
+</html>
