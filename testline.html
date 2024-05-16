@@ -24,11 +24,23 @@
     <svg width="800" height="400"></svg>
 
     <script>
-        var rawData = `Country,Year,Life expectancy
-Afghanistan,2000,54.8
-Afghanistan,2001,55.3
-Zimbabwe,2018,60.7
-Zimbabwe,2019,61.2`;
+        // Đoạn mã JavaScript để đọc dữ liệu từ tệp CSV
+    d3.csv("data/all_years_data.json").then(function(data) {
+    var parsedData = {};
+    data.forEach(function(d) {
+        var country = d.Country,
+            year = +d.Year,
+            lifeExp = +d["Life expectancy"];
+        if (!parsedData[country]) parsedData[country] = [];
+        parsedData[country].push({ year: year, lifeExpectancy: lifeExp });
+    });
+
+    var countries = Object.keys(parsedData);
+    var select = d3.select("#countrySelect");
+    select.selectAll("option")
+        .data(countries)
+        .enter().append("option")
+        .text(function(d) { return d; });})
 
         var svg = d3.select("svg"),
             margin = { top: 20, right: 20, bottom: 30, left: 50 },
