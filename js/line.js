@@ -1,53 +1,72 @@
-// Set dimensions and margins of the graph
-const margin = { top: 10, right: 30, bottom: 30, left: 60 },
-width = 800 - margin.left - margin.right,
-height = 500 - margin.top - margin.bottom;
+// Load the data from the JSON file
+d3.json("data/all_years_data.json").then(function(data) {
+        // Map data by country
+        const countryData = {};
+        data.forEach(d => {
+            if (!countryData[d.Country]) {
+                countryData[d.Country] = [];
+            }
+            countryData[d.Country].push({ year: d3.timeParse("%Y")(d.Year), value: +d["Life expectancy "] });
+        });
 
-// Append the svg object to the body of the page
-const svg = d3.select("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", `translate(${margin.left},${margin.top})`);
+        // Populate the dropdown menu
+        const countries = Object.keys(countryData);
+        const select = d3.select("#countrySelector");
+        select.selectAll("option")
+              .data(countries)
+              .enter()
+              .append("option")
+              .text(d => d)
+              .attr("value", d => d);
 
-// Read the data from the CSV file
-d3.csv("F:\Onedrive\Documents\GitHub\DSDV_project\data\all_years_data.csv").then(function(data) {
-// Format the data
-const sumstat = d3.group(data, d => d.country);
-const years = data.columns.slice(1); // assuming years are in columns after the first
+        // Initial graph setup
+        const margin = { top: 20, right: 30, bottom: 50, left: 70 },
+              width = 800 - margin.left - margin.right,
+              height = 500 - margin.top - margin.bottom;
+        const svg = d3.select("svg")
+                      .attr("width", width + margin.left + margin.right)
+                      .attr("height", height + margin.top + margin.bottom)
+                      .append("g")
+                      .attr("transform", `translate(${margin.left},${margin.top})`);
+        const x = d3.scaleTime().range([0, width]);
+        const y = d3.scaleLinear().range([height, 0]);
+        const xAxis = svg.append("g").attr("transform", `translate(0,${height})`);
+        const yAxis = svg.append("g");
+        const line = d3.line().x(d => x(d.year)).y(d => y(d.value));
+        const path = svg.append("path").attr("class", "line");
 
-// Add X axis
-const x = d3.scaleLinear()
-          .domain(d3.extent(years))
-          .range([0, width]);
-svg.append("g")
- .attr("transform", `translate(0,${height})`)
- .call(d3.axisBottom(x));
+        // Add X axis label
+        svg.append("text")
+           .attr("text-anchor", "end")
+           .attr("x", width / 2 + margin.left)
+           .attr("y", height + margin.top + 20)
+           .text("Year");
 
-// Add Y axis
-const y = d3.scaleLinear()
-          .domain([0, d3.max(data, d => d3.max(years, year => +d[year]))])
-          .range([height, 0]);
-svg.append("g")
- .call(d3.axisLeft(y));
+        // Add Y axis label
+        svg.append("text")
+           .attr("text-anchor", "end")
+           .attr("transform", "rotate(-90)")
+           .attr("y", -margin.left + 20)
+           .attr("x", -margin.top - height / 2 + 20)
+           .text("Life Expectancy");
 
-// Color palette
-const color = d3.scaleOrdinal()
-              .domain(sumstat.keys())
-              .range(d3.schemeCategory10);
+        // Function to update the graph
+        function updateGraph(country) {
+            const data = countryData[country];
+            x.domain(d3.extent(data, d => d.year));
+            y.domain([0, d3.max(data, d => d.value)]);
+            xAxis.call(d3.axisBottom(x));
+            yAxis.call(d3.axisLeft(y));
+            path.datum(data)
+                .attr("d", line)
+                .attr("stroke", "blue");
+        }
 
-// Draw the line
-svg.selectAll(".line")
- .data(sumstat)
- .enter()
- .append("path")
-  .attr("fill", "none")
-  .attr("stroke", d => color(d[0]))
-  .attr("stroke-width", 1.5)
-  .attr("d", function(d) {
-      return d3.line()
-               .x(d => x(d.year))
-               .y(d => y(d.value))
-               (d[1])
-  });
-});
+        // Handle change event
+        select.on("change", function() {
+            updateGraph(this.value);
+        });
+
+        // Initial update
+        updateGraph(countries[0]);
+    });
