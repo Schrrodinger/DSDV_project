@@ -1,76 +1,72 @@
-var rawData = `Country,Year,Life expectancy
-Afghanistan,2000,54.8
-Afghanistan,2001,55.3
-
-Zimbabwe,2018,60.7
-Zimbabwe,2019,61.2`;
-
-        var ctx = document.getElementById('lifeExpectancyChart').getContext('2d');
-        var chart;
-        var parsedData = {};
-
-        function parseData() {
-            var lines = rawData.split('\n');
-            lines.forEach(line => {
-                var parts = line.split(',');
-                var country = parts[0];
-                var year = parts[1];
-                var lifeExp = parts[2];
-                if (!parsedData[country]) {
-                    parsedData[country] = [];
-                }
-                parsedData[country].push({ x: parseInt(year), y: parseFloat(lifeExp) });
-            });
-        }
-        var x = d3.scaleBand()
-    .range([0, width])
-    .domain(data.map(function(d) { return d.year; }))
-    .padding(0.1);
-
-svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x));
-
-
-        function populateCountries() {
-            var countrySelect = document.getElementById('countrySelect');
-            Object.keys(parsedData).forEach(country => {
-                var option = document.createElement('option');
-                option.value = country;
-                option.text = country;
-                countrySelect.appendChild(option);
-            });
-        }
-
-        function updateChart() {
-            var selectedCountry = document.getElementById('countrySelect').value;
-            if (chart) {
-                chart.destroy();
+// Load the data from the JSON file
+d3.json("data/all_years_data.json").then(function(data) {
+        // Map data by country
+        const countryData = {};
+        data.forEach(d => {
+            if (!countryData[d.Country]) {
+                countryData[d.Country] = [];
             }
-            chart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    datasets: [{
-                        label: 'Life Expectancy',
-                        data: parsedData[selectedCountry],
-                        fill: false,
-                        borderColor: 'rgb(75, 192, 192)',
-                        tension: 0.1
-                    }]
-                },
-                options: {
-                    scales: {
-                        x: {
-                            type: 'linear',
-                            position: 'bottom'
-                        }
-                    }
-                }
-            });
+            countryData[d.Country].push({ year: d3.timeParse("%Y")(d.Year), value: +d["Life expectancy "] });
+        });
+
+        // Populate the dropdown menu
+        const countries = Object.keys(countryData);
+        const select = d3.select("#countrySelector");
+        select.selectAll("option")
+              .data(countries)
+              .enter()
+              .append("option")
+              .text(d => d)
+              .attr("value", d => d);
+
+        // Initial graph setup
+        const margin = { top: 20, right: 30, bottom: 50, left: 70 },
+              width = 800 - margin.left - margin.right,
+              height = 500 - margin.top - margin.bottom;
+        const svg = d3.select("svg")
+                      .attr("width", width + margin.left + margin.right)
+                      .attr("height", height + margin.top + margin.bottom)
+                      .append("g")
+                      .attr("transform", `translate(${margin.left},${margin.top})`);
+        const x = d3.scaleTime().range([0, width]);
+        const y = d3.scaleLinear().range([height, 0]);
+        const xAxis = svg.append("g").attr("transform", `translate(0,${height})`);
+        const yAxis = svg.append("g");
+        const line = d3.line().x(d => x(d.year)).y(d => y(d.value));
+        const path = svg.append("path").attr("class", "line");
+
+        // Add X axis label
+        svg.append("text")
+           .attr("text-anchor", "end")
+           .attr("x", width / 2 + margin.left)
+           .attr("y", height + margin.top + 20)
+           .text("Year");
+
+        // Add Y axis label
+        svg.append("text")
+           .attr("text-anchor", "end")
+           .attr("transform", "rotate(-90)")
+           .attr("y", -margin.left + 20)
+           .attr("x", -margin.top - height / 2 + 20)
+           .text("Life Expectancy");
+
+        // Function to update the graph
+        function updateGraph(country) {
+            const data = countryData[country];
+            x.domain(d3.extent(data, d => d.year));
+            y.domain([0, d3.max(data, d => d.value)]);
+            xAxis.call(d3.axisBottom(x));
+            yAxis.call(d3.axisLeft(y));
+            path.datum(data)
+                .attr("d", line)
+                .attr("stroke", "blue");
         }
 
-        window.onload = function() {
-            parseData();
-            populateCountries();
-            updateChart();
-        };
+        // Handle change event
+        select.on("change", function() {
+            updateGraph(this.value);
+        });
+
+        // Initial update
+        updateGraph(countries[0]);
+    });
