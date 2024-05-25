@@ -71,7 +71,7 @@ var yAxis = d3.axisLeft(y);
 
 // Define the line
 var valueline = d3.line()
-    .x(function(d) { return x(d.Population); })
+    .x(function(d) { return x(d.Bmi); })
     .y(function(d) { return y(d['Life.expectancy']); });
 
 // Adds the svg canvas
@@ -17725,7 +17725,7 @@ var data = [
 // Rest of the code will go here...
 // Process the data
 data.forEach(function(d) {
-    d.Population = +d.BMI; // Convert population to number
+    d.BMI = +d.BMI; // Convert population to number
     d['Life.expectancy'] = +d['Life.expectancy']; // Convert life expectancy to number
     d.Year = +d.Year; // Convert year to number
 });
@@ -17828,7 +17828,7 @@ svg.append("text")
   .attr("text-anchor", "middle")
   .attr("x", width / 2)
   .attr("y", -margin.top / 2 + 20) // Adjust this value to position the title
-  .text("Afghanistan over 15 years")
+  .text("Country over 15 years")
   .style("font-family", "Arial, sans-serif") // Choose a font family
   .style("font-size", "24px") // Increase the font size
   .style("fill", "#4E79A7") // Use a hex color code for a specific shade
