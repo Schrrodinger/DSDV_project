@@ -11,132 +11,52 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <title> Life Expectancy Dashboard </title>
-  <style>
-    .dashboard {
-      display: flex;
-      gap: 1px; 
-    }
-    .line1,
-    .pie1 {
-      flex: 1;
-    }
-    .pie1 iframe {
-      width: 80%;
-      height: 350px; /* Adjust the height value as needed */
-    }
-    .line1 iframe {
-      width: 90%;
-      height: 350px;
-      margin-right: 10px;
-    }
+<style>
 
-    .worldmap {
-      flex-basis: 100%; /* Makes the world map take the full width */
-    }
+</style>
 
-  </style>
-</head>
-<body >
-  <nav class="sidebar close">
-    <header>
-      <div class="image-text">
-        <span class="image">
-          <img src="logo.jpg" alt="logo">
-        </span>
-
-        <div class="text header-text">
-          <span class="name">Data Visualization</span>
-          <span class="profession">CodingProject</span>
+    <body onload="init('easy')">
+    <div id="main">
+        <!--Task bar-->
+        <div id="header">
+            <ul id="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dashboard">Dash Board</a></li>
+                <li><a href="#other">Other</a></li>
+            </ul>
         </div>
-      </div>
-
-      <i class='bx bx-chevron-right toggle'></i>
-    </header>
-
-    <div class="menu-bar">
-      <div class="menu">
-        <li class ="search-box">
-            <i class='bx bx-search icon'></i>
-            <input type = "search" placeholder="Search...">
-        </li>
-        <ul class="menu-links">
-          <li class ="nav-link">
-            <a href="#" id="overview-item">
-              <i class='bx bx-home icon'></i>
-              <span class="text nav-text">Overview</span>
-            </a>
-          </li>
-          <li class ="nav-link">
-            <a href="#">
-              <i class='bx bx-bar-chart-alt-2 icon'></i>
-              <span class="text nav-text">Dashboard</span>
-            </a>
-          </li>
-          <li class ="nav-link">
-            <a href="#">
-              <i class='bx bxl-github icon'></i>
-              <span class="text nav-text">Github</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bottom-content">
-        <li class="">
-          <a href="#">
-            <i class = 'bx bx-log-out icon'></i>
-            <span class="text nav-text">Logout</span>
-          </a>
-        </li>      
-
-        <li class ="mode">
-          <div class="moon-sun">
-            <i class = 'bx bx-moon icon moon'></i>
-            <i class = 'bx bx-sun icon sun'></i>
-          </div>
-          <span class="mode-text text">Dark Mode</span>
-
-          <div class="toggle-switch">
-            <span class="switch"></span>
-          </div>
-        </li>
-
-      </div>
     </div>
-  </nav>
-  
 
-  <section class="home">
-    <div class="text">Life Expectancy</div>
-    <div class="dashboard">
-      <div class="worldmap">
-        <iframe src="worldmap.html" frameborder="0" style="border:0; width:90%; height:500px;" allowfullscreen=""></iframe>
-      </div>
-      <div class="line1">
-        <iframe src="line1.html" width="100%" height="500px"></iframe>
-      </div>
-      <div class="pie1">
-        <iframe src="pie1.html" width="100%" height="500px"></iframe>
-      </div>
-      <div class="pie2">
-        <iframe src="pie2.html" width="100%" height="500px"></iframe>
-      </div>
-      <div class="line">
-        <iframe src="year_line.html" width="100%" height="500px"></iframe>
-      </div>
-      
+    <div id="dashboard">
+        <div class="dashboard">
+
+            <div class="worldmap">
+              <iframe src="worldmap.html" frameborder="0" style="border:0; width:90%; height:500px;" allowfullscreen=""></iframe>
+            </div>
+
+            <div class="pie1">
+              <iframe src="pie1.html" width="100%" height="500px"></iframe>
+            </div>
+
+            <div class="pie2">
+              <iframe src="pie2.html" width="100%" height="500px"></iframe>
+            </div>
+
+            <div class="line">
+              <iframe src="year_line.html" width="100%" height="500px"></iframe>
+            </div>
+            
+        </div>
     </div>
+
+    <div id="other">
+        <div class="line1">
+            <iframe src="line1.html" width="100%" height="500px"></iframe>
+          </div>
+    </div>
+
+
+    <script src ="js/script.js"></script>
     
-  </section>
-
-  
-
-  </section>
-  <script src ="js/script.js"></script>
-  
-
-
-  
-
-  </body>
-  </html>
+</body>
+</html>
