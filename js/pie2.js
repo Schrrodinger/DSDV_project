@@ -22,7 +22,7 @@ fetch('data/all_years_data.json')
   })
   .catch(error => console.error(error));
 
-let myChart;
+let myPie2Chart;
 
 function updatePieChart(data, selectedCountry) {
   const countryData = data.filter(record => record.Country === selectedCountry);
@@ -55,17 +55,19 @@ function updatePieChart(data, selectedCountry) {
   };
 
   // Update the pie chart
-  const ctx = document.getElementById('myChart');
+  const ctx = document.getElementById('myPie2Chart');
   ctx.style.width = '300px'; 
   ctx.style.height = '300px'; 
+  ctx.width = 300; // Set the width of the chart
+  ctx.height = 300; // Set the height of the chart
   const containerWidth = ctx.parentElement.offsetWidth;
   const containerHeight = ctx.parentElement.offsetHeight;
 
-  if (myChart) {
-    myChart.destroy(); // Destroy the previous chart
+  if (myPie2Chart) {
+    myPie2Chart.destroy(); // Destroy the previous chart
   }
 
-  myChart = new Chart(ctx, {
+  myPie2Chart = new Chart(ctx, {
     type: 'pie',
     data: {
       labels: ['Hepatitis B', 'Polio', 'Diphtheria '],
@@ -120,10 +122,4 @@ function updatePieChart(data, selectedCountry) {
       devicePixelRatio: 4 
       }
   });
-
-  // Add CSS positioning to fix the chart on the screen
-  ctx.style.position = 'fixed';
-  ctx.style.top = '50%';
-  ctx.style.left = '60%';
-  ctx.style.transform = 'translate(-70%, -70%)';
 }

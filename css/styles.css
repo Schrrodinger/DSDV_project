@@ -62,16 +62,11 @@ body, html {
     box-sizing: border-box;
 }
 
-.pie1,.pie2 {
-    width: 30%;
-}
 
 .bar {
     width: 70%;
 }
 
-.pie1 iframe,
-.pie2 iframe,
 .line iframe {
   border: none;
 }
