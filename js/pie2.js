@@ -87,7 +87,7 @@ function updatePieChart(data, selectedCountry) {
       plugins: {
         title: {
           display: true,
-          text: `Top Three Primary Factors Influencing Life Expectancy - ${selectedCountry}`,
+          text: `Immunization Coverage Among 1-year-old - ${selectedCountry}`,
           font: {
             size: 30, // Increase the font size of the title
             family: 'Georgia, serif' // Change the font-family of the title
