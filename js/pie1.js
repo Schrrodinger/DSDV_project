@@ -117,7 +117,7 @@ function updatePieChart(data, selectedCountry) {
           borderColor: '#ffffff' // Set the border color to white for better contrast
         }
       },
-      devicePixelRatio: 4 // Tăng độ phân giải lên 2 lần
+      devicePixelRatio: 4 // Tăng độ phân giải lên 4 lần
       }
   });
 
