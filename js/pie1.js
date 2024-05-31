@@ -62,7 +62,7 @@ function updatePieChart(data, selectedCountry) {
   ctx.height = 300; // Set the height of the chart
   const containerWidth = ctx.parentElement.offsetWidth;
   const containerHeight = ctx.parentElement.offsetHeight;
-
+  
   if (myPie1Chart) {
     myPie1Chart.destroy(); // Destroy the previous chart
   }

@@ -2,7 +2,7 @@
 fetch('data/avg_life_expectancy.json') // Adjust the path to your JSON file as necessary
 .then(response => response.json()) // Parse the JSON from the response
 .then(data => {
-    // Process the data into a more convenient format
+    // Process the data into a more convenient format, transform data into an object
     const lifeExpectancyData = data.reduce((acc, item) => {
         acc[item.Country] = item['Life.expectancy'];
         return acc;
@@ -16,21 +16,20 @@ fetch('data/avg_life_expectancy.json') // Adjust the path to your JSON file as n
 // Function to initialize the map
 function initializeMap(lifeExpectancyData) {
 const svg = d3.select("#worldmap").append("svg")
-    .attr("width", "100%")
-    .attr("height", "100%");
+    .attr("width", "780px")
+    .attr("height", "750px");
 
 const projection = d3.geoMercator()
-    .scale(150)
-    .translate([window.innerWidth / 2, window.innerHeight / 1.5]);
+    .scale(107)
+    .translate([window.innerWidth / 2.5, window.innerHeight / 2]);
 const path = d3.geoPath().projection(projection);
 
 const zoom = d3.zoom()
-    .scaleExtent([1, 8])
+    .scaleExtent([1, 1.5])
     .on('zoom', (event) => {
         svg.selectAll('path').attr('transform', event.transform);
     });
 svg.call(zoom);
-
 
 // Load and display the world map
 d3.json("https://unpkg.com/world-atlas@2/countries-110m.json")

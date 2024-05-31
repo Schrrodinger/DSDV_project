@@ -20,9 +20,11 @@ d3.json("data/all_years_data.json").then(function(data) {
               .attr("value", d => d);
 
         // Initial graph setup
-        const margin = { top: 20, right: 30, bottom: 50, left: 70 },
-              width = 800 - margin.left - margin.right,
-              height = 500 - margin.top - margin.bottom;
+        const margin = { top: 50, right: 30, bottom: 25, left: 70 };
+        const width = 470;
+        const height = 300;
+              //width = 800 - margin.left - margin.right,
+             // height = 500 - margin.top - margin.bottom;
         const svg = d3.select("svg")
                       .attr("width", width + margin.left + margin.right)
                       .attr("height", height + margin.top + margin.bottom)
@@ -34,6 +36,12 @@ d3.json("data/all_years_data.json").then(function(data) {
         const yAxis = svg.append("g");
         const line = d3.line().x(d => x(d.year)).y(d => y(d.value));
         const path = svg.append("path").attr("class", "line");
+
+        path.attr("fill", "none")
+            .attr("stroke", "blue")
+            .attr("stroke-width", 2);
+
+
 
         // Add X axis label
         svg.append("text")
@@ -61,6 +69,7 @@ d3.json("data/all_years_data.json").then(function(data) {
                 .attr("d", line)
                 .attr("stroke", "blue");
         }
+
 
         // Handle change event
         select.on("change", function() {
