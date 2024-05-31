@@ -31,6 +31,7 @@ const zoom = d3.zoom()
     });
 svg.call(zoom);
 
+
 // Load and display the world map
 d3.json("https://unpkg.com/world-atlas@2/countries-110m.json")
     .then(data => {

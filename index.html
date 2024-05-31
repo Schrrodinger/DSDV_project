@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://d3js.org/topojson.v3.min.js"></script>
+
   
    
   <link rel="stylesheet" href="css/styles.css">
@@ -30,6 +32,7 @@
         <div class="dashboard">
 
             <div class="worldmap">
+              <canvas id="worldmap"></canvas>
               <iframe src="worldmap.html" frameborder="0" style="border:0; width:90%; height:500px;" allowfullscreen=""></iframe>
             </div>
             <div class="line">
@@ -39,23 +42,24 @@
     </div>
 
     <div id="other">
-        <div class="line1">
-            <iframe src="line1.html" width="100%" height="500px"></iframe>
-          </div>
+      <div class="chart-container">
+        <canvas id="lifeExpectancyChart"></canvas>
+    </div>>
     </div>
 
     <select id="countryDropdown"></select>
-
+    
     <canvas id="myPie1Chart"></canvas>
     <canvas id="myPie2Chart"></canvas>
     <canvas id="myBarChart"></canvas>
+  
 
 
     <script src="js\pie1.js"></script>
     <script src="js\pie2.js"></script>
     <script src="js\bar.js"></script>
 
-
+    <script src = 'js/avg_line.js'></script>
     <script src ="js/script.js"></script>
     <script src ="js/index.js"></script>
     

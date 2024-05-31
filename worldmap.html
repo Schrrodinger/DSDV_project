@@ -12,18 +12,6 @@
     <div id="tooltip"></div>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://d3js.org/topojson.v3.min.js"></script>
-    <script>
-        d3.json("F:\Onedrive\Documents\GitHub\DSDV_project\data\avg_life_expectancy.xlsx").then(function (data) {
-            // Bind data and create one path per GeoJSON feature
-            svg.selectAll("path")
-                .data(data.features)
-                .enter()
-                .append("path")
-                .attr("d", path)
-                .style("fill", "lightblue"); // Change color as needed based on your data
-        });
-
-    </script>
     <script src ="js/map.js"></script>
     
 </body>

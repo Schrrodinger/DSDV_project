@@ -91,8 +91,8 @@ function updatePieChart(data, selectedCountry) {
           display: true,
           text: `Immunization Coverage Among 1-year-old - ${selectedCountry}`,
           font: {
-            size: 30, // Increase the font size of the title
-            family: 'Georgia, serif' // Change the font-family of the title
+            size: 24, // Increase the font size of the title
+            family: 'Arial, serif' // Change the font-family of the title
           }
         },
         legend: {

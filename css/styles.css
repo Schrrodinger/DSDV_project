@@ -1,7 +1,7 @@
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -12,15 +12,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1px; 
+    gap: 20px; /* Increased gap for better spacing between charts */
 }
   
 .graph,
 .testing {
     width: calc(50% - 10px);
     margin-bottom: 20px;
-  }
-
+}
 
 body, html {
     height: 80%;
@@ -28,8 +27,9 @@ body, html {
 }
 
 #worldmap {
-    width: 100%;
-    height: 400px;
+    width: 90%; /* or any other size */
+    height: 500px; /* or any other size */
+    margin: auto; /* centering the map */
 }
 
 
@@ -56,31 +56,31 @@ body, html {
 .worldmap {
     flex-basis: 100%; /* Makes the world map take the full width */
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
+.chart-container {
+    width: 50%; /* Set the width for each chart container */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 
 .bar {
     width: 70%;
 }
 
 .line iframe {
-  border: none;
+    border: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.clear{
+.clear {
     clear: both;
 }
 
-#header{
+#header {
     background: linear-gradient(45deg, #29aeec, #df494b);
     height: 46px;
     width: 100%;
@@ -90,31 +90,51 @@ html{
     position: fixed;
 }
 
-#nav{
+#nav {
     display: inline-block;
 }
 
-#nav li{
+#nav li {
     position: relative;
 }
 
-#nav > li{
+#nav > li {
     display: inline-block;
 }
 
-#nav li a{
+#nav li a {
     line-height: 46px;
     padding: 0 24px;
     text-decoration: none;
     display: block;
 }
 
-#nav > li > a{
+#nav > li > a {
     color: #fff;
     font-weight: 500;
     text-transform: uppercase;
 }
-#nav > li:hover > a{
+
+#nav > li:hover > a {
     color: #000;
     background-color: #88cde6;
+}
+.charts-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  /* This centers the charts vertically within the container */
+}
+
+.chart-container {
+    flex-basis: 300px; /* This ensures that each container is at least 300px wide */
+    margin: 10px; /* Provides some space around each chart */
+}
+.chart-container {
+    width: 80%;
+    margin: auto;
+    height: 300px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
