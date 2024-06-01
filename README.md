@@ -1,7 +1,5 @@
 # DSDV_project
-<div id="header" align="center">
-<!-- PROJECT LOGO -->   <img src="./assets/logo/logo.png" alt="Logo" width="200" height="200">
-</div>
+
 </br>
 
 <!-- Shield.io Badges -->
@@ -67,11 +65,10 @@ This study explores the multifaceted impact of socio-economic, health, and envir
 
 <!-- CHALLENGES -->
 # Challenges
-
+We got problems in interaction between charts, map, and lay-out in CSS
 <!-- ACKNOWLEDGMENTS -->
 # Acknowledgments
-
-> [!IMPORTANT]
+We need to have knowledges in JS, CSS and HTML to do this project.
 
 <p align="justify">
 
@@ -79,8 +76,9 @@ This study explores the multifaceted impact of socio-economic, health, and envir
 
 <!-- REFERENCES -->
 # References
-Dataset: https://www.kaggle.com/code/varunsaikanuri/life-expectancy-visualization?fbclid=IwAR3lERVqXxcH5RMTFWKgt77kQ8j2iAHonEqUokNZl69dU5R___w4lqyijI4
-D3. (n.d.). Retrieved from https://d3js.org/
+Dataset: [https://www.kaggle.com/code/varunsaikanuri/life-expectancy-visualization?fbclid=IwAR3lERVqXxcH5RMTFWKgt77kQ8j2iAHonEqUokNZl69dU5R___w4lqyijI4
+D3. (n.d.)](https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who). 
+Library: D3.js
 
 
 <p align="right">(<a href="#header">Back to top</a>)</p>
