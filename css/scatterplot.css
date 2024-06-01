@@ -11,13 +11,7 @@
             stroke: steelblue;
             stroke-width: 2px;
         }
-
-        .overlay {
-            fill: none;
-            pointer-events: all;
-        }
-
-        /* Tooltip container */
+        
         .tooltip {
             position: absolute;
             text-align: center;
@@ -32,13 +26,10 @@
             opacity: 0;
         }
 
-        select {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+        .dot.Developing {
+            fill: #4E79A7; /* Màu xanh dương đậm cho quốc gia phát triển */         
         }
 
-        .dot {
-            fill: #ffab00;
-            stroke: #fff;
+        .dot.Developed {
+            fill: #ffab00; /* Màu cam cho quốc gia phát triển */            
         }
