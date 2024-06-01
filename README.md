@@ -1,7 +1,5 @@
 # DSDV_project
-<div id="header" align="center">
-<!-- PROJECT LOGO -->   <img src="./assets/logo/logo.png" alt="Logo" width="200" height="200">
-</div>
+
 </br>
 
 <!-- Shield.io Badges -->
