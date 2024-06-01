@@ -30,32 +30,32 @@
     <div id="home">
       <div class="column">
         <div class="worldmap">
-          <iframe src="worldmap.html" frameborder="0" style="border:0; width:100%; height:700px;" ></iframe>
+          <iframe src="worldmap.html" frameborder="0" style="border:0; width:100%; height:660px;" ></iframe>
         </div>
       </div>
       <div class="column">
-        <div class="line">      
-          <iframe src="year_line.html" style="border:0; width:100%; height:400px;" allowfullscreen=""></iframe>
+        <div class="line">     
+          <iframe src="year_line.html"style="border:0; width:100%; height:400px;" allowfullscreen=""></iframe>
+        </div>
+        <div class="chart-container">
+          <canvas id="lifeExpectancyChart"; width="30%"; height="160";></canvas>
         </div>
       </div>
     </div>
     
     <div id="dashboard">
         <div class="dashboard">
-  
+          <select id="countryDropdown" style="margin-bottom: 5px;"></select>
+          <canvas id="myPie1Chart"></canvas>
+          <canvas id="myPie2Chart"></canvas>
+          <canvas id="myBarChart"></canvas>
         </div>
     </div>
 
-    <div id="other">
-      <div class="chart-container">
-        <canvas id="lifeExpectancyChart"></canvas>
-    </div>>
+    <div id="other"> 
+      
     </div>
 
-    <select id="countryDropdown"></select>
-    <canvas id="myPie1Chart"></canvas>
-    <canvas id="myPie2Chart"></canvas>
-    <canvas id="myBarChart"></canvas>
 
 
 

@@ -1,5 +1,6 @@
 // Load the data from the JSON file
 d3.json("data/all_years_data.json").then(function(data) {
+        
         // Map data by country
         const countryData = {};
         data.forEach(d => {
@@ -20,11 +21,9 @@ d3.json("data/all_years_data.json").then(function(data) {
               .attr("value", d => d);
 
         // Initial graph setup
-        const margin = { top: 50, right: 30, bottom: 25, left: 70 };
+        const margin = { top: 30, right: 30, bottom: 100, left: 50 };
         const width = 470;
-        const height = 300;
-              //width = 800 - margin.left - margin.right,
-             // height = 500 - margin.top - margin.bottom;
+        const height = 280;
         const svg = d3.select("svg")
                       .attr("width", width + margin.left + margin.right)
                       .attr("height", height + margin.top + margin.bottom)
@@ -47,7 +46,7 @@ d3.json("data/all_years_data.json").then(function(data) {
         svg.append("text")
            .attr("text-anchor", "end")
            .attr("x", width / 2 + margin.left)
-           .attr("y", height + margin.top + 20)
+           .attr("y", height + margin.top )
            .text("Year");
 
         // Add Y axis label
@@ -55,7 +54,7 @@ d3.json("data/all_years_data.json").then(function(data) {
            .attr("text-anchor", "end")
            .attr("transform", "rotate(-90)")
            .attr("y", -margin.left + 20)
-           .attr("x", -margin.top - height / 2 + 20)
+           .attr("x", -margin.top - height / 2 )
            .text("Life Expectancy");
 
         // Function to update the graph
@@ -78,4 +77,6 @@ d3.json("data/all_years_data.json").then(function(data) {
 
         // Initial update
         updateGraph(countries[0]);
-    });
+    }
+    
+);

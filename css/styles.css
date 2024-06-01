@@ -27,8 +27,12 @@ body, html {
     height: 80%;
     margin: 0;
 }
+
 #home {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 100%;
   }
   
   .column:first-child {
@@ -41,12 +45,42 @@ body, html {
   .column {
     padding: 0; /* Ensures no padding between columns */
   }
-      
+  #home .column {
+    float: left;
+    width: 50%; /* Adjust width as necessary */
+  }
+  
+  @media (max-width: 768px) {
+    #home .column {
+      width: 100%; /* Each column takes full width on smaller screens */
+      float: none;
+    }
+  }
+    
+  #home {
+    margin-top: 0px; /* Should match the height of the header */
+}
+
+#countrySelector {
+    width: 100%; /* Use percentage to make it responsive */
+    max-width: 300px; /* Optional: limit the maximum width */
+    font-size: 1.2rem; /* Responsive font size */
+    padding: 8px 12px; /* Adequate padding */
+}
+
+#countrySelector {
+    z-index: 1000; /* Ensures it is above most other elements */
+}
+.parent-container { /* Replace .parent-container with the actual parent container class or ID */
+    overflow: visible;
+}
+
 /* WORLD MAP */
 #worldmap {
     
     width: 100%; /* or any other size */
-    height: 300px; /* or any other size */
+    height: 400px; /* or any other size */
+    z-index: 12;
 }
 
 
@@ -55,7 +89,7 @@ body, html {
     display: none;
     background-color: white;
     border: 1px solid black;
-    padding: 5px;
+    padding: 0px;
     pointer-events: none; /* Ensure the tooltip doesn't interfere with mouse events */
 }
 /* WORLD MAP */
@@ -64,7 +98,7 @@ body, html {
 .avg-line-chart {
     display: flex;
     justify-content: right;
-    margin-top: 50px;
+    margin-top: 30px;
     width: 45%;
   }
   
@@ -91,13 +125,14 @@ html {
 
 #header {
     background: linear-gradient(45deg, #29aeec, #df494b);
-    height: 46px;
+    height: 40px;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100;
     position: fixed;
 }
+
 
 #nav {
     display: inline-block;
@@ -168,7 +203,7 @@ html {
     text-align: center;
     width: 120px;
     height: 50px;
-    padding: 2px;
+    padding: 0px;
     font: 12px sans-serif;
     background: lightsteelblue;
     border: 0px;
@@ -180,6 +215,43 @@ select {
     margin: 10px;
     padding: 5px;
 }
+.line iframe {
+    width: 100%; /* Full width of the container */
+    height: 400px; /* Sufficient height to display content */
+    border: none; /* Removes the border around the iframe */
+}
+#countrySelector {
+    display: block; /* Ensures dropdown is visible */
+    width: 100%; /* Full width of the dropdown */
+    max-width: 100px; /* Limits the maximum width */
+    margin: 5px auto; /* Centers the dropdown horizontally */
+    padding: 0px; /* Padding for better touch interaction */
+    z-index: 1000; /* Ensures it's above other content */
+    background-color: #fff; /* Ensures a background color */
+}
+#countrySelector {
+    position: absolute; /* or 'relative' depending on layout */
+    top: 20px; /* Distance from the top of the nearest positioned ancestor */
+    left: 20px; /* Distance from the left of the nearest positioned ancestor */
+}
+#countrySelector {
+    width: 200px; /* Width of the dropdown */
+    height: 40px; /* Height of the dropdown */
+    font-size: 10px; /* Size of the text inside the dropdown */
+}
+#countrySelector {
+    display: block;
+    margin: 0 auto; /* Automatically adjust margins to center the element */
+    width: 200px; /* Set a specific width */
+}
+@media (max-width: 600px) {
+    #countrySelector {
+        width: 100%; /* Full width on small screens */
+        font-size: 14px; /* Smaller text on small screens */
+    }
+}
+
+
 /*YEAR_LINE */
 
 /*Line.js */
@@ -191,10 +263,33 @@ select {
 .line {
     display: flex;
     justify-content: right;  /* Centers the iframe horizontally in its container */
-    margin-top: 10px;         /* Adds space above the iframe */
+    margin-top: 0px;         /* Adds space above the iframe */
 }
 #countrySelector {
     flex-basis: 30%; 
 }
 
 /*Line.js*/
+
+.column {
+    width: 100%;
+  }
+  
+  .line, .chart-container {
+    width: 100%;
+    margin-bottom: 0px; /* Adds some space between the charts */
+  }
+  
+  canvas {
+    width: 100%; /* Ensure canvas takes full width of its container */
+    height: 300px; /* Keep height auto or set a fixed height */
+    padding: 0px;
+  }
+
+ /*..............................................................
+
+ 
+
+
+  
+  
