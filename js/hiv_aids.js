@@ -27,7 +27,7 @@ var svg = d3.select("#scatter-plot")
 // Define the div for the tooltip
 var tooltip = d3.select("body").append("div") 
     .attr("class", "tooltip")       
-    .style("opacity", 0);
+    .style("opacity", 5);
 
 // Load the data
 var data =

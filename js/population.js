@@ -29,7 +29,12 @@ var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")       
     .style("opacity", 0);
 
+let Population;
+
 // Load the data
+fetch('data/all_years_data.json')
+  .then(response => response.json())
+  .then(data => {})
 var data =
  [
     

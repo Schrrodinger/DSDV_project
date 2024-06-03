@@ -8,119 +8,10 @@
     box-sizing: border-box;
 }
 
-
-
-.dashboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; /* Increased gap for better spacing between charts */
-}
-  
-.graph,
-.testing {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-}
-
 body, html {
-    height: 80%;
+    height: 100%;
     margin: 0;
-}
-
-#home {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    width: 100%;
-  }
-  
-  .column:first-child {
-    flex: 4;  /* This column takes 4/7 of the space */
-  }
-  
-  .column:last-child {
-    flex: 3;  /* This column takes 3/7 of the space */
-  }
-  .column {
-    padding: 0; /* Ensures no padding between columns */
-  }
-  #home .column {
-    float: left;
-    width: 50%; /* Adjust width as necessary */
-  }
-  
-  @media (max-width: 768px) {
-    #home .column {
-      width: 100%; /* Each column takes full width on smaller screens */
-      float: none;
-    }
-  }
-    
-  #home {
-    margin-top: 0px; /* Should match the height of the header */
-}
-
-#countrySelector {
-    width: 100%; /* Use percentage to make it responsive */
-    max-width: 300px; /* Optional: limit the maximum width */
-    font-size: 1.2rem; /* Responsive font size */
-    padding: 8px 12px; /* Adequate padding */
-}
-
-#countrySelector {
-    z-index: 1000; /* Ensures it is above most other elements */
-}
-.parent-container { /* Replace .parent-container with the actual parent container class or ID */
-    overflow: visible;
-}
-
-/* WORLD MAP */
-#worldmap {
-    
-    width: 100%; /* or any other size */
-    height: 400px; /* or any other size */
-    z-index: 12;
-}
-
-
-#tooltip {
-    position: absolute;
-    display: none;
-    background-color: white;
-    border: 1px solid black;
-    padding: 0px;
-    pointer-events: none; /* Ensure the tooltip doesn't interfere with mouse events */
-}
-/* WORLD MAP */
-
-/*avg line chart */
-.avg-line-chart {
-    display: flex;
-    justify-content: right;
-    margin-top: 30px;
-    width: 45%;
-  }
-  
-/*avg line chart */
-
-.chart-container {
-    width: 100%; /* Set the width for each chart container */
-    padding: 10px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-.bar {
-    width: 70%;
-}
-
-html {
     scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.clear {
-    clear: both;
 }
 
 #header {
@@ -129,10 +20,70 @@ html {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
     position: fixed;
 }
 
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px; /* Same as header height */
+    width: 100%;
+    height: calc(100% - 40px); /* Adjust height accounting for header */
+    align-items: flex-end; /* Aligns children to the right */
+}
+
+.avg-line-chart {
+    width: 300px; /* Adjust width as needed */
+    margin-top: 10px; /* Space below the header */
+    background-color: #fff; /* Background color for visibility */
+    border: 1px solid #ccc; /* Optional border */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional shadow */
+    padding: 10px; /* Padding inside the chart container */
+}
+
+.graph,
+.testing {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+#home {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.column:first-child {
+    flex: 4;  /* This column takes 4/7 of the space */
+}
+
+.column:last-child {
+    flex: 3;  /* This column takes 3/7 of the space */
+}
+
+@media (max-width: 768px) {
+    #home .column {
+        width: 100%; /* Each column takes full width on smaller screens */
+        float: none;
+    }
+}
+
+#worldmap {
+    width: 100%;
+    height: 400px;
+    z-index: 12;
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+    background-color: white;
+    border: 1px solid black;
+    padding: 0px;
+    pointer-events: none;
+}
 
 #nav {
     display: inline-block;
@@ -151,9 +102,6 @@ html {
     padding: 0 24px;
     text-decoration: none;
     display: block;
-}
-
-#nav > li > a {
     color: #fff;
     font-weight: 500;
     text-transform: uppercase;
@@ -163,133 +111,28 @@ html {
     color: #000;
     background-color: #88cde6;
 }
+
 .charts-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;  /* This centers the charts vertically within the container */
+    align-items: center;
 }
 
 .chart-container {
-    flex-basis: 300px; /* This ensures that each container is at least 300px wide */
-    margin: 10px; /* Provides some space around each chart */
+    flex-basis: 300px; /* Each container is at least 300px wide */
+    margin: 10px; /* Space around each chart */
 }
-.chart-container {
-    width: 80%;
-    margin: auto;
-    height: 300px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-/* YEAR_LINE */
-.axis path,
-.axis line {
-    fill: none;
-    stroke: rgb(255, 244, 244);
-    shape-rendering: crispEdges;
-}
-.axis text {
-    font-family: sans-serif;
-    font-size: 12px;
-}
-.line {
-    fill: none;
-    stroke: blue;
-    stroke-width: 2;
-}
-.tooltip {
-    position: absolute;
-    text-align: center;
-    width: 120px;
-    height: 50px;
-    padding: 0px;
-    font: 12px sans-serif;
-    background: lightsteelblue;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-    opacity: 0;
-}
-select {
-    margin: 10px;
-    padding: 5px;
-}
-.line iframe {
-    width: 100%; /* Full width of the container */
-    height: 400px; /* Sufficient height to display content */
-    border: none; /* Removes the border around the iframe */
-}
-#countrySelector {
-    display: block; /* Ensures dropdown is visible */
-    width: 100%; /* Full width of the dropdown */
-    max-width: 100px; /* Limits the maximum width */
-    margin: 5px auto; /* Centers the dropdown horizontally */
-    padding: 0px; /* Padding for better touch interaction */
-    z-index: 1000; /* Ensures it's above other content */
-    background-color: #fff; /* Ensures a background color */
-}
-#countrySelector {
-    position: absolute; /* or 'relative' depending on layout */
-    top: 20px; /* Distance from the top of the nearest positioned ancestor */
-    left: 20px; /* Distance from the left of the nearest positioned ancestor */
-}
-#countrySelector {
-    width: 200px; /* Width of the dropdown */
-    height: 40px; /* Height of the dropdown */
-    font-size: 10px; /* Size of the text inside the dropdown */
-}
-#countrySelector {
-    display: block;
-    margin: 0 auto; /* Automatically adjust margins to center the element */
-    width: 200px; /* Set a specific width */
-}
-@media (max-width: 600px) {
-    #countrySelector {
-        width: 100%; /* Full width on small screens */
-        font-size: 14px; /* Smaller text on small screens */
-    }
-}
-
-
-/*YEAR_LINE */
-
-/*Line.js */
-.line {
-    fill: none;
-    stroke: blue;
-    stroke-width: 2px;
-}
-.line {
-    display: flex;
-    justify-content: right;  /* Centers the iframe horizontally in its container */
-    margin-top: 0px;         /* Adds space above the iframe */
-}
-#countrySelector {
-    flex-basis: 30%; 
-}
-
-/*Line.js*/
-
-.column {
-    width: 100%;
+.pie-chart {
+    width: 300px; /* Set a specific width */
+    height: 300px; /* Set a specific height */
+    margin: 20px; /* Add some margin for spacing */
+    display: block; /* Ensures the div is not hidden */
   }
   
-  .line, .chart-container {
-    width: 100%;
-    margin-bottom: 0px; /* Adds some space between the charts */
+  #dashboard {
+    display: flex; /* Using flex to layout the charts */
+    justify-content: space-around; /* Spacing around the charts */
+    align-items: center; /* Vertically align items in this container */
+    padding: 20px; /* Padding around the dashboard area */
   }
-  
-  canvas {
-    width: 100%; /* Ensure canvas takes full width of its container */
-    height: 300px; /* Keep height auto or set a fixed height */
-    padding: 0px;
-  }
-
- /*..............................................................
-
- 
-
-
-  
   
