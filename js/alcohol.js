@@ -12,14 +12,16 @@ var xAxis = d3.axisBottom(x);
 var yAxis = d3.axisLeft(y);
 
 // Adds the svg canvas
-var svg = d3.select("#scatter-plot")
+
+var svg = d3.select("#alcohol-scatter-plot")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
-    .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+console.log("SVG for alcohol:", svg.node()); // This should log the SVG element.
 
+    
 // Define the div for the tooltip
 var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
