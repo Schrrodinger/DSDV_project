@@ -33,12 +33,18 @@ function updateBarChart(data, selectedCountry) {
 
   // Create the bar chart
   const ctx = document.getElementById('myBarChart');
-  ctx.width = 800; // Set the width of the chart
-  ctx.height = 500; // Set the height of the chart
-  ctx.style.width = '800px'; // Set the container width
-  ctx.style.height = '500px'; // Set the container height
+  ctx.width = 700; // Set the width of the chart
+  ctx.height = 400; // Set the height of the chart
+  ctx.style.width = '700px'; // Set the container width
+  ctx.style.height = '400px'; // Set the container height
   const containerWidth = ctx.parentElement.offsetWidth;
   const containerHeight = ctx.parentElement.offsetHeight;
+
+  // Set the position of the chart
+  ctx.style.position = 'absolute';
+  ctx.style.left = '30%'; // Center the chart horizontally
+  ctx.style.top = '150%'; // Center the chart vertically
+  ctx.style.transform = 'translate(-50%, -50%)'; // Adjust the position to center the chart
 
   if (myBarChart) {
     myBarChart.destroy(); // Destroy the previous chart

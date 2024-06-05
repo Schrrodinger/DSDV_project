@@ -14,17 +14,17 @@ fetch('data/all_years_data.json')
 
     // Update the pie chart when the country is selected
     countryDropdown.addEventListener('change', () => {
-      updatePieChart(data, countryDropdown.value);
+      updatePie2Chart(data, countryDropdown.value);
     });
 
     // Show the initial pie chart for the first country
-    updatePieChart(data, countries[0]);
+    updatePie2Chart(data, countries[0]);
   })
   .catch(error => console.error(error));
 
 let myPie2Chart;
 
-function updatePieChart(data, selectedCountry) {
+function updatePie2Chart(data, selectedCountry) {
   const countryData = data.filter(record => record.Country === selectedCountry);
 
   // Calculate the averages for the selected country
@@ -56,12 +56,18 @@ function updatePieChart(data, selectedCountry) {
 
   // Update the pie chart
   const ctx = document.getElementById('myPie2Chart');
-  ctx.style.width = '300px'; 
-  ctx.style.height = '300px'; 
-  ctx.width = 300; // Set the width of the chart
-  ctx.height = 300; // Set the height of the chart
+  ctx.style.width = '320px'; 
+  ctx.style.height = '320px'; 
+  ctx.width = 400; // Set the width of the chart
+  ctx.height = 400; // Set the height of the chart
   const containerWidth = ctx.parentElement.offsetWidth;
   const containerHeight = ctx.parentElement.offsetHeight;
+
+   // Set the position of the chart
+   ctx.style.position = 'absolute';
+   ctx.style.left = '80%'; // Center the chart horizontally
+   ctx.style.top = '190%'; // Center the chart vertically
+   ctx.style.transform = 'translate(-50%, -50%)'; // Adjust the position to center the chart
 
   if (myPie2Chart) {
     myPie2Chart.destroy(); // Destroy the previous chart
@@ -79,7 +85,7 @@ function updatePieChart(data, selectedCountry) {
           '#008080',
           '#ba55d3'
         ],
-        borderWidth: 2, // Increase the border width for better visibility
+        borderWidth: 4, // Increase the border width for better visibility
         borderColor: '#ffffff' // Set the border color to white for better contrast
       }]
     },
@@ -91,15 +97,15 @@ function updatePieChart(data, selectedCountry) {
           display: true,
           text: `Immunization Coverage Among 1-year-old - ${selectedCountry}`,
           font: {
-            size: 24, // Increase the font size of the title
-            family: 'Arial, serif' // Change the font-family of the title
+            size: 28, // Increase the font size of the title
+            family: 'Georgia, serif' // Change the font-family of the title
           }
         },
         legend: {
             position: 'bottom', // Move the legend to the bottom
             labels: {
               font: {
-                size: 14, // Increase the font size of the legend
+                size: 18, // Increase the font size of the legend
                 family: 'Georgia, serif' // Change the font-family of the legend
               }
             }
