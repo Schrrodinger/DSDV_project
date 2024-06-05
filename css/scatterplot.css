@@ -27,9 +27,11 @@
         }
 
         .dot.Developing {
-            fill: #4E79A7; /* Màu xanh dương đậm cho quốc gia phát triển */         
+            fill: #4E79A7; /* Màu xanh dương đậm cho quốc gia phát triển */    
+            stroke: rgb(239, 242, 244);     
         }
 
         .dot.Developed {
-            fill: #ffab00; /* Màu cam cho quốc gia phát triển */            
+            fill: #ffab00; /* Màu cam cho quốc gia phát triển */   
+            stroke: rgb(239, 242, 244);         
         }
