@@ -1,3 +1,4 @@
+function createScatterPlotPopulation() {
 // Set the dimensions and margins of the graph
 const margin = { top: 200, right: 100, bottom: 100, left: 220 },
     width = 960 - margin.left - margin.right,
@@ -12,14 +13,13 @@ var xAxis = d3.axisBottom(x);
 var yAxis = d3.axisLeft(y);
 
 // Adds the svg canvas
-
 var svg = d3.select("#population-scatter-plot")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+    .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
 
 // Define the div for the tooltip
 var tooltip = d3.select("body").append("div")
@@ -108,3 +108,5 @@ fetch('data/all_years_data.json')
 
     })
    .catch(error => console.error('Error fetching JSON:', error));
+}
+createScatterPlotPopulation();
