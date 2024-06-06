@@ -2,7 +2,7 @@ function createScatterPlotBMI() {
 
 // Set the dimensions and margins of the graph
 const margin = { top: 200, right: 100, bottom: 100, left: 220 },
-    width = 960 - margin.left - margin.right,
+    width = 850 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 // Set the ranges
@@ -77,10 +77,10 @@ fetch('data/all_years_data.json')
         svg.append("text")
             .attr("text-anchor", "middle")
             .attr("x", width / 2)
-            .attr("y", -margin.top / 2 + 20)
+            .attr("y", -margin.top / 2 )
             .text("Country over 15 years")
             .style("font-family", "Arial, sans-serif")
-           .style("font-size", "24px")
+           .style("font-size", "15px")
             .style("fill", "#4E79A7")
             .style("font-weight", "bold");
 
@@ -89,18 +89,18 @@ fetch('data/all_years_data.json')
             .attr("text-anchor", "middle")
             .attr("transform", "rotate(0)")
             .attr("y", -margin.left + 200)
-            .attr("x", -50)
+            .attr("x", 50)
             .text("Life Expectancy")
             .style("font-family", "Arial, sans-serif")
-            .style("font-size", "18px")
+            .style("font-size", "15px")
             .style("fill", "#6C757D")
             .style("font-weight", "bold");
 
         // Add X axis label
         svg.append("text")
             .attr("text-anchor", "end")
-            .attr("x", width - margin.right + 200)
-            .attr("y", height + margin.bottom - 50)
+            .attr("x", width - margin.right + 100)
+            .attr("y", height + margin.bottom - 60)
             .text("BMI")
             .style("font-family", "Arial, sans-serif")
             .style("font-size", "18px")

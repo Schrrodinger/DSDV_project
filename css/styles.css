@@ -211,5 +211,28 @@ body, html {
             fill: #ffab00; /* Màu cam cho quốc gia phát triển */   
             stroke: rgb(239, 242, 244);         
         }
-
+        
+        
+#other {
+    display: flex;
+    flex-wrap: wrap;  /* Cho phép các items bọc nếu không vừa */
+    justify-content: space-around;  /* Cân bằng khoảng cách giữa các scatterplot */
+    align-items: flex-start;  /* Căn các items ở đầu container */
+        }
+        
+    .scatterplot {
+        flex: 1 1 48%;  /* Cho phép scatterplot chiếm khoảng 48% chiều rộng của container */
+        margin: 10px;  /* Thêm khoảng cách xung quanh */
+     }
+#other {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Tạo 2 cột với kích thước bằng nhau */
+    grid-gap: 20px;  /* Thêm khoảng cách giữa các scatterplot */
+    }
+    
+    .scatterplot {
+        width: 100%;  /* Chiều rộng của mỗi scatterplot sẽ đầy cột */
+        height: 300px;  /* Đặt chiều cao cố định cho mỗi scatterplot */
+    }
+       
          

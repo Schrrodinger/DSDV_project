@@ -52,3 +52,4 @@ const lifeExpectancyChart = new Chart(ctx, {
         }
     }
 });
+createLineChart();
