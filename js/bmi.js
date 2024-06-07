@@ -1,13 +1,16 @@
 function createScatterPlotBMI() {
 
 // Set the dimensions and margins of the graph
-const margin = { top: 200, right: 100, bottom: 100, left: 220 },
-    width = 850 - margin.left - margin.right,
+const margin = { top: 200, right: 100, bottom: 100, left: 40},
+    width = 750 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 // Set the ranges
-var x = d3.scaleLinear().range([0, width]);
+var x = d3.scaleLinear()
+    .domain([0,50])
+    .range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
+
 
 // Define the axes
 var xAxis = d3.axisBottom(x);
@@ -38,7 +41,7 @@ fetch('data/all_years_data.json')
         });
 
         // Scale the range of the data
-        x.domain([0, d3.max(data, function(d) { return d.BMI; })]);
+        x.domain([0, d3.max(data, function(d) { return d.BMI; })/0.8]);
         y.domain([0, d3.max(data, function(d) { return d.LifeExpectancy; })]);
 
         // Add the scatterplot points
@@ -72,15 +75,16 @@ fetch('data/all_years_data.json')
         // Add the Y Axis
         svg.append("g")
             .call(yAxis);
+            
 
         // Add graph title
         svg.append("text")
-            .attr("text-anchor", "middle")
+            .attr("text-anchor", "left")
             .attr("x", width / 2)
-            .attr("y", -margin.top / 2 )
-            .text("Country over 15 years")
+            .attr("y", -margin.top / 2 +37 )
+            .text("Other Factors Effect On Life Expectancy")
             .style("font-family", "Arial, sans-serif")
-           .style("font-size", "15px")
+           .style("font-size", "18px")
             .style("fill", "#4E79A7")
             .style("font-weight", "bold");
 
@@ -88,7 +92,7 @@ fetch('data/all_years_data.json')
         svg.append("text")
             .attr("text-anchor", "middle")
             .attr("transform", "rotate(0)")
-            .attr("y", -margin.left + 200)
+            .attr("y", -margin.left + 30)
             .attr("x", 50)
             .text("Life Expectancy")
             .style("font-family", "Arial, sans-serif")
@@ -103,7 +107,7 @@ fetch('data/all_years_data.json')
             .attr("y", height + margin.bottom - 60)
             .text("BMI")
             .style("font-family", "Arial, sans-serif")
-            .style("font-size", "18px")
+            .style("font-size", "15px")
             .style("fill", "#6C757D")
             .style("font-weight", "bold");
 

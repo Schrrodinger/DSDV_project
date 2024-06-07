@@ -1,13 +1,14 @@
 function createScatterPlotMeasles() {
 
 // Set the dimensions and margins of the graph
-const margin = { top: 200, right: 100, bottom: 100, left: 220 },
-    width = 850 - margin.left - margin.right,
+const margin = { top: 150, right: 100, bottom: 150, left: 40 },
+    width = 750 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 // Set the ranges
 var x = d3.scaleLinear().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
+
 
 // Define the axes
 var xAxis = d3.axisBottom(x);
@@ -38,7 +39,7 @@ fetch('data/all_years_data.json')
         });
 
         // Scale the range of the data
-        x.domain([0, d3.max(data, function(d) { return d.Measles; })]);
+        x.domain([0, d3.max(data, function(d) { return d.Measles; })/0.5]);
         y.domain([0, d3.max(data, function(d) { return d.LifeExpectancy; })]);
 
         // Add the scatterplot points
@@ -74,21 +75,21 @@ fetch('data/all_years_data.json')
             .call(yAxis);
 
         // Add graph title
-        svg.append("text")
-            .attr("text-anchor", "middle")
-            .attr("x", width / 2)
-            .attr("y", -margin.top / 2 )
-            .text("Country over 15 years")
-            .style("font-family", "Arial, sans-serif")
-           .style("font-size", "15px")
-            .style("fill", "#4E79A7")
-            .style("font-weight", "bold");
+        // svg.append("text")
+        //     .attr("text-anchor", "middle")
+        //     .attr("x", width / 2)
+        //     .attr("y", -margin.top / 2 )
+        //     .text("Country over 15 years")
+        //     .style("font-family", "Arial, sans-serif")
+        //    .style("font-size", "15px")
+        //     .style("fill", "#4E79A7")
+        //     .style("font-weight", "bold");
 
         // Add Y axis label
         svg.append("text")
             .attr("text-anchor", "middle")
             .attr("transform", "rotate(0)")
-            .attr("y", -margin.left + 200)
+            .attr("y", -margin.left +30)
             .attr("x", 50)
             .text("Life Expectancy")
             .style("font-family", "Arial, sans-serif")
@@ -100,10 +101,10 @@ fetch('data/all_years_data.json')
         svg.append("text")
             .attr("text-anchor", "end")
             .attr("x", width - margin.right + 100)
-            .attr("y", height + margin.bottom - 60)
+            .attr("y", height + margin.bottom -110)
             .text("Measles")
             .style("font-family", "Arial, sans-serif")
-            .style("font-size", "18px")
+            .style("font-size", "15px")
             .style("fill", "#6C757D")
             .style("font-weight", "bold");
 

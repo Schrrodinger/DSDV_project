@@ -1,13 +1,14 @@
 function createScatterPlotAlcohol() {
 
 // Set the dimensions and margins of the graph
-const margin = { top: 200, right: 100, bottom: 100, left: 220 },
-    width = 850 - margin.left - margin.right,
+const margin = { top: 200, right: 80, bottom: 100, left: 30 },
+    width = 750 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 // Set the ranges
 var x = d3.scaleLinear().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
+
 
 // Define the axes
 var xAxis = d3.axisBottom(x);
@@ -38,8 +39,10 @@ fetch('data/all_years_data.json')
         });
 
         // Scale the range of the data
-        x.domain([0, d3.max(data, function(d) { return d.Alcohol; })]);
+        x.domain([0, d3.max(data, function(d) { return d.Alcohol; })/0.8]);
         y.domain([0, d3.max(data, function(d) { return d['Life expectancy ']; })]);
+
+        
 
         // Add the scatterplot points
         svg.selectAll("dot")
@@ -52,7 +55,7 @@ fetch('data/all_years_data.json')
             .on("mouseover", function(event, d) {
                 tooltip.transition()
                     .duration(200)
-                    .style("opacity", .9);
+                    .style("opacity", 1.5);
                 tooltip.html(d.Country + "<br/>" + d.Year + "<br/>Life expectancy: " +
                         d['Life expectancy '] + "<br/>Alcohol: " + d.Alcohol)
                     .style("left", (event.pageX) + "px")
@@ -68,27 +71,29 @@ fetch('data/all_years_data.json')
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
             .call(xAxis);
+            
 
         // Add the Y Axis
         svg.append("g")
             .call(yAxis);
 
+
         // Add graph title
-        svg.append("text")
-            .attr("text-anchor", "middle")
-            .attr("x", width / 2)
-            .attr("y", -margin.top / 2 +25)
-            .text("Country over 15 years")
-            .style("font-family", "Arial, sans-serif")
-           .style("font-size", "15px")
-            .style("fill", "#4E79A7")
-            .style("font-weight", "bold");
+        // svg.append("text")
+        //     .attr("text-anchor", "middle")
+        //     .attr("x", width / 2)
+        //     .attr("y", -margin.top / 2 +25)
+        //     .text("Country over 15 years")
+        //     .style("font-family", "Arial, sans-serif")
+        //    .style("font-size", "15px")
+        //     .style("fill", "#4E79A7")
+        //     .style("font-weight", "bold");
 
         // Add Y axis label
         svg.append("text")
             .attr("text-anchor", "middle")
             .attr("transform", "rotate(0)")
-            .attr("y", -margin.left + 200)
+            .attr("y", -margin.left +20)
             .attr("x", 50)
             .text("Life Expectancy")
             .style("font-family", "Arial, sans-serif")

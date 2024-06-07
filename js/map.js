@@ -38,13 +38,13 @@ d3.json("https://unpkg.com/world-atlas@2/countries-110m.json")
             .data(topojson.feature(data, data.objects.countries).features)
             .enter().append("path")
             .attr("d", path)
-            .attr("fill", "#7f7f7f") // Original darker color
+            .attr("fill", "#569ac4") // Original darker color
             .attr("stroke", "white") // Borders between countries
             .attr("stroke-width", 0.5) // Border width
             .on("mouseover", function(event, d) {
                 const countryName = d.properties.name;
                 const lifeExpectancy = lifeExpectancyData[countryName] ? lifeExpectancyData[countryName] : "No data";
-                d3.select(this).attr("fill", "#9dc9ac"); // Lighter color on hover
+                d3.select(this).attr("fill", "#ddadaf"); // Lighter color on hover
                 d3.select("#tooltip")
                     .style("left", (event.pageX + 15) + "px")
                     .style("top", (event.pageY + 15) + "px")
@@ -52,7 +52,7 @@ d3.json("https://unpkg.com/world-atlas@2/countries-110m.json")
                     .html(`Country: ${countryName}<br>Life Expectancy: ${lifeExpectancy}`);
             })
             .on("mouseout", function() {
-                d3.select(this).attr("fill", "#7f7f7f"); // Revert to original color
+                d3.select(this).attr("fill", "#5694c4"); // Revert to original color
                 d3.select("#tooltip").style("display", "none");
             });
     })

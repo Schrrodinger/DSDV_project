@@ -66,7 +66,7 @@ function updatePie2Chart(data, selectedCountry) {
    // Set the position of the chart
    ctx.style.position = 'absolute';
    ctx.style.left = '80%'; // Center the chart horizontally
-   ctx.style.top = '190%'; // Center the chart vertically
+   ctx.style.top = '180%'; // Center the chart vertically
    ctx.style.transform = 'translate(-50%, -50%)'; // Adjust the position to center the chart
 
   if (myPie2Chart) {
@@ -98,7 +98,7 @@ function updatePie2Chart(data, selectedCountry) {
           text: `Immunization Coverage Among 1-year-old - ${selectedCountry}`,
           font: {
             size: 28, // Increase the font size of the title
-            family: 'Georgia, serif' // Change the font-family of the title
+            family: 'Arial, san-serif' // Change the font-family of the title
           }
         },
         legend: {
@@ -106,7 +106,7 @@ function updatePie2Chart(data, selectedCountry) {
             labels: {
               font: {
                 size: 18, // Increase the font size of the legend
-                family: 'Georgia, serif' // Change the font-family of the legend
+                family: 'Arial, san-serif' // Change the font-family of the legend
               }
             }
         }

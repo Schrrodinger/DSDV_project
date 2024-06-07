@@ -35,8 +35,8 @@ function updateBarChart(data, selectedCountry) {
   const ctx = document.getElementById('myBarChart');
   ctx.width = 700; // Set the width of the chart
   ctx.height = 400; // Set the height of the chart
-  ctx.style.width = '700px'; // Set the container width
-  ctx.style.height = '400px'; // Set the container height
+  ctx.style.width = '730px'; // Set the container width
+  ctx.style.height = '550px'; // Set the container height
   const containerWidth = ctx.parentElement.offsetWidth;
   const containerHeight = ctx.parentElement.offsetHeight;
 

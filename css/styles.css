@@ -213,26 +213,36 @@ body, html {
         }
         
         
-#other {
-    display: flex;
-    flex-wrap: wrap;  /* Cho phép các items bọc nếu không vừa */
-    justify-content: space-around;  /* Cân bằng khoảng cách giữa các scatterplot */
-    align-items: flex-start;  /* Căn các items ở đầu container */
+        #other {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* Two columns */
+            grid-template-rows: repeat(2, 1fr);  /* Two rows */
+            gap: 0px;  /* Space between plots */
+            padding: 0px;  /* Padding around the grid */
+            width: 100vw;  /* Full viewport width */
+            height: 100vh;  /* Full viewport height */
+            align-items: tretch;  /* Center align items vertically */
+            justify-items: tretch;  /* Center align items horizontally*/
         }
         
-    .scatterplot {
-        flex: 1 1 48%;  /* Cho phép scatterplot chiếm khoảng 48% chiều rộng của container */
-        margin: 10px;  /* Thêm khoảng cách xung quanh */
-     }
-#other {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Tạo 2 cột với kích thước bằng nhau */
-    grid-gap: 20px;  /* Thêm khoảng cách giữa các scatterplot */
-    }
-    
-    .scatterplot {
-        width: 100%;  /* Chiều rộng của mỗi scatterplot sẽ đầy cột */
-        height: 300px;  /* Đặt chiều cao cố định cho mỗi scatterplot */
-    }
-       
-         
+        .scatterplot {
+            width: calc(50vw - 10px);  /* 50% of viewport width minus gap */
+            height: calc(50vh - 10px);  /* 50% of viewport height minus gap */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            #other {
+                grid-template-columns: 1fr;  /* Stack plots in one column on smaller screens */
+                grid-template-rows: repeat(4, 25vh);  /* Four rows, each taking 25% of the viewport height */
+            }
+        
+            .scatterplot {
+                width: calc(100vw - 20px);  /* Full width of viewport minus padding */
+                height: calc(25vh - 20px);  /* 25% of viewport height minus gap */
+            }
+        }
+        
+        

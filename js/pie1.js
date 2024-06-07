@@ -66,7 +66,7 @@ function updatePie1Chart(data, selectedCountry) {
    // Set the position of the chart
    ctx.style.position = 'absolute';
    ctx.style.left = '80%'; // Center the chart horizontally
-   ctx.style.top = '145%'; // Center the chart vertically
+   ctx.style.top = '138%'; // Center the chart vertically
    ctx.style.transform = 'translate(-50%, -50%)'; // Adjust the position to center the chart
   
   if (myPie1Chart) {
@@ -97,8 +97,8 @@ function updatePie1Chart(data, selectedCountry) {
           display: true,
           text: `Top Three Primary Factors Influencing Life Expectancy - ${selectedCountry}`,
           font: {
-            size: 35, // Increase the font size of the title
-            family: 'Georgia, serif' // Change the font-family of the title
+            size: 30, // Increase the font size of the title
+            family: 'Arial, san-serif' // Change the font-family of the title
           }
         },
         legend: {
@@ -106,7 +106,7 @@ function updatePie1Chart(data, selectedCountry) {
             labels: {
               font: {
                 size: 18, // Increase the font size of the legend
-                family: 'Georgia, serif' // Change the font-family of the legend
+                family: 'Arial, san-serif' // Change the font-family of the legend
               }
             }
         }
