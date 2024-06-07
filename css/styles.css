@@ -79,8 +79,9 @@ body, html {
 #tooltip {
     position: absolute;
     display: none;
+    font-size: larger;
     background-color: white;
-    border: 1px solid black;
+    border: 3px solid black;
     padding: 0px;
     pointer-events: none;
 }

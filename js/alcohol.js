@@ -58,7 +58,7 @@ fetch('data/all_years_data.json')
                     .style("opacity", 1.5);
                 tooltip.html(d.Country + "<br/>" + d.Year + "<br/>Life expectancy: " +
                         d['Life expectancy '] + "<br/>Alcohol: " + d.Alcohol)
-                    .style("left", (event.pageX) + "px")
+                    .style("left", (event.pageX) + 5+ "px")
                     .style("top", (event.pageY - 28) + "px");
             })
             .on("mouseout", function(d) {
