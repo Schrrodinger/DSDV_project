@@ -54,6 +54,7 @@
 
 
 <!-- VISUAL -->
+## Visual
 ![image](https://github.com/Schrrodinger/DSDV_project/assets/92284690/c02ffb07-3ed4-4a42-bb83-d92fc68dc266)
 ![image](https://github.com/Schrrodinger/DSDV_project/assets/92284690/2372cd51-6572-486d-851d-e39f120e5d29)
 ![image](https://github.com/Schrrodinger/DSDV_project/assets/92284690/5d399ff0-c10e-4f49-bbce-441f3ce1914e)
