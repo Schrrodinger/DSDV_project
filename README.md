@@ -25,7 +25,7 @@
       <a href="#Introduction">Introduction</a>
       <ul>
         <li><a href="#Team-members">Team Members</a></li>
-	<li><a href="#installation">Installation</a></li>
+	<li><a href="#Visual">Visual</a></li>
 	<li><a href="#motivation">Motivation</a></li>
 	<li><a href="#task-allocation">Task Allocation</a></li>      
       </ul>
@@ -53,7 +53,13 @@
 |   3   | Le Thi Thuy Nga | ITDSIU21024 | ITDSIU21024@student.hcmiu.edu.vn | [Schrrodinger](https://github.com/Schrrodinger) | [Thuy Nga](https://www.facebook.com/profile.php?id=100032005854236) |
 
 
-<!-- INSTALLATION -->
+<!-- VISUAL -->
+![image](https://github.com/Schrrodinger/DSDV_project/assets/92284690/c02ffb07-3ed4-4a42-bb83-d92fc68dc266)
+![image](https://github.com/Schrrodinger/DSDV_project/assets/92284690/2372cd51-6572-486d-851d-e39f120e5d29)
+![image](https://github.com/Schrrodinger/DSDV_project/assets/92284690/5d399ff0-c10e-4f49-bbce-441f3ce1914e)
+
+
+
 
 <!-- MOTIVATION -->
 ## Motivation 
